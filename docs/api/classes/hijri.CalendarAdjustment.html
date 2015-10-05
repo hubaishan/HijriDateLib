@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1047412106"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1694741331"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1047412106" class="accordion-body collapse in">
+            <div id="namespace-1694741331" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1730452149"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1775636672"></a>
                                 <a href="../namespaces/hijri.html" style="margin-left: 30px; padding-left: 0">hijri</a>
             </div>
-            <div id="namespace-1730452149" class="accordion-body collapse ">
+            <div id="namespace-1775636672" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -189,21 +189,10 @@
                                             </nav>
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
-                    <h1><small>\hijri</small>Calendar</h1>
-                    <p><em>Hijri Calendar Class is group of functions that gets the Hijri Calendar and converts it to other calendars</em></p>
-                    <p>This class contains functions work similar to calendar functions in PHP but
-it is work with Hijri Calendar.
-The Class has two algorithms to calculate the Hijri Date</p>
-<dt>Hijri Tabular Algorithm:</dt><dd>This algorithm was used by past to simplify
-the Hijri Calendar calculation, The result of this algorithm  identical to Hijri
-Calendar in Microsoft programs and "The Calendar of Centuries-تقويم القرون"
-book of "Saleh Alojiry صالح العجيري".</dd>
-<dt>Umm Al-Qura Algorithm(Recommended).</dt><dd>This is the official calendar of Saudi Arabia
-Kingdom based on astronomical calculation which published in the site http://www.ummulqura.org.sa,
-the range of this algorithm from year 1318 to 1500, the start of hijri months
-of this algorithm can be adjusted by using CalendarAdjustment Class see file adjuster.php in folder example as sample</dd>
-to set the default setting of this class use $hijri_settings variable which
-is an array with this sample structure:
+                    <h1><small>\hijri</small>CalendarAdjustment</h1>
+                    <p><em>Hijri CalendarAdjustment Class is group of functions that help to get and correct adjustments to Umm Al-Qura Calendar</em></p>
+                    <p>to set the default setting of this class use $hijri_settings variable which
+is an array with this sample structure:</p>
 <pre><code>$hijri_settings=array(
     'langcode'=>'ar',
     'defaultformat'=>'_j _M _Yهـ',
@@ -228,7 +217,7 @@ is an array with this sample structure:
                         </section>
                         <section class="row-fluid public">
                             <section class="span4">
-                                                                    <a href="../classes/hijri.Calendar.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#method___construct" class="">__construct()</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#method_jd2hijri" class="">jd2hijri()</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#method_JDToHijri" class="">JDToHijri()</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#method_GregorianToHijri" class="">GregorianToHijri()</a><br />
@@ -243,6 +232,14 @@ is an array with this sample structure:
                                                                     <a href="../classes/hijri.Calendar.html#method_month_name" class="">month_name()</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#method_leap_year" class="">leap_year()</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#method_checkHijriDate" class="">checkHijriDate()</a><br />
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#method_get_adjdata" class="">get_adjdata()</a><br />
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#method_check_auto_del" class="">check_auto_del()</a><br />
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#method_check_auto_adj" class="">check_auto_adj()</a><br />
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#method_get_possible_starts" class="">get_possible_starts()</a><br />
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#method_get_current_adjs" class="">get_current_adjs()</a><br />
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#method_add_adj" class="">add_adj()</a><br />
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#method_del_adj" class="">del_adj()</a><br />
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#method_auto_del_info" class="">auto_del_info()</a><br />
                                                             </section>
                             <section class="span4">
                                                                     <a href="../classes/hijri.Calendar.html#property_umalqura" class="">$umalqura</a><br />
@@ -262,6 +259,7 @@ is an array with this sample structure:
                             <section class="span4">
                                                                     <a href="../classes/hijri.Calendar.html#property_umdata" class="">$umdata</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#property_adj_data" class="">$adj_data</a><br />
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#property_umdata_clear" class="">$umdata_clear</a><br />
                                                             </section>
                             <section class="span4">
                                 <em>N/A</em>
@@ -272,7 +270,7 @@ is an array with this sample structure:
                                                                     <em>No private methods found</em>
                                                             </section>
                             <section class="span4">
-                                                                    <em>No private properties found</em>
+                                                                    <a href="../classes/hijri.CalendarAdjustment.html#property_grdate_format" class="">$grdate_format</a><br />
                                                             </section>
                             <section class="span4">
                                 <em>N/A</em>
@@ -290,7 +288,9 @@ is an array with this sample structure:
                             <dd><div class="namespace-wrapper">Default</div></dd>
                                                 <dt>Class hierarchy</dt>
                             <dd class="hierarchy">
-                                                                                                                                                                    <div class="namespace-wrapper">\hijri\Calendar</div>
+                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper"><a href="../classes/hijri.Calendar.html">\hijri\Calendar</a></div>
+                                                                                                    <div class="namespace-wrapper">\hijri\CalendarAdjustment</div>
                             </dd>
 
                         
@@ -308,6 +308,14 @@ is an array with this sample structure:
                             </th>
                             <td>
                                                                     <p>2015 Saeed Hubaishan</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                since
+                            </th>
+                            <td>
+                                                                    
                                                             </td>
                         </tr>
                                             <tr>
@@ -368,7 +376,9 @@ is an array with this sample structure:
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                         <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -389,7 +399,9 @@ is an array with this sample structure:
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                         <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -410,7 +422,9 @@ is an array with this sample structure:
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                         <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -431,7 +445,9 @@ is an array with this sample structure:
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                         <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -464,6 +480,8 @@ is an array with this sample structure:
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                         <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
@@ -488,6 +506,8 @@ is an array with this sample structure:
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                         <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
@@ -519,6 +539,8 @@ is an array with this sample structure:
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                         <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
@@ -543,6 +565,8 @@ is an array with this sample structure:
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                         <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
@@ -551,7 +575,55 @@ is an array with this sample structure:
         </aside>
     </div>
 
-                                            
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_umdata_clear" name="property_umdata_clear" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$umdata_clear</h3>
+                <pre class="signature">$umdata_clear : array</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                &mdash; original Umm Al-Qura Data without any adjustments                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_grdate_format" name="property_grdate_format" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$grdate_format</h3>
+                <pre class="signature">$grdate_format : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; The date format to get Gregorian dates form adjustment information                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
                                     <a id="methods" name="methods"></a>
             <div class="row-fluid">
                 <div class="span8 content class"><h2>Methods</h2></div>
@@ -565,7 +637,7 @@ is an array with this sample structure:
                 <h3 class="public ">__construct()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">__construct(array  <span class="argument">$settings = array()</span>) : \hijri\Calendar</pre>
-                <p><em>Create new hijri\Calendar object according to given settings</em></p>
+                <p><em>Create new hijri\CalendarAdjustment object according to given settings</em></p>
                 
 
                                     <h4>Parameters</h4>
@@ -573,11 +645,12 @@ is an array with this sample structure:
                                                     <tr>
                                 <td>array</td>
                                 <td>$settings </td>
-                                <td><p>Optional array contains one or more settings of the hijri
-calendar object these settings are:</p>
-<dt>umalqura:bool</dt> <dd> TRUE to use Um AlQura algorithm, FALSE to use Hijri Tabular algorithm</dd>
-        <dt>adj_data:string|array</dt> <dd>string: contains Um Al-Qura adjustment data that got by function get_adjdata(TRUE) of CalendarAdjustment class
-                                            or array contains Um Al-Qura adjustment data that got by function get_adjdata(FALSE)</dd>
+                                <td><p>Array contains one or more settings of the hijri
+CalendarAdjustment object these settings are:</p>
+<div style='margin-left:20px'>
+        <dt>adj_data: string|array</dt>     <dd>string: contains Um Al-Qura adjustment data that got by function get_adjdata(TRUE) of CalendarAdjustment class
+                                                or array contains Um Al-Qura adjustment data that got by function get_adjdata(FALSE)</dd>
+        <dt>grdate_format: string</dt>      <dd>date format to show the Gregorian dates in adjustment process</dd><div>
         if not set, the defaults from $hijri_settings global variable will be used.</td>
                             </tr>
                                             </table>
@@ -585,7 +658,7 @@ calendar object these settings are:</p>
                 
                                     <h4>Returns</h4>
                     <a href="../classes/hijri.Calendar.html">\hijri\Calendar</a>
-                                            &mdash; <p>hijri\Calendar object with the specified settings.</p>
+                                            &mdash; <p>hijri\CalendarAdjustment object with the specified settings.</p>
                                     				
                             </article>
         </div>
@@ -653,7 +726,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -690,7 +765,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -737,7 +814,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -784,7 +863,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -831,7 +912,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -878,7 +961,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -925,7 +1010,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -972,7 +1059,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -1019,7 +1108,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -1066,7 +1157,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -1103,7 +1196,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -1150,7 +1245,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr>
@@ -1199,7 +1296,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -1246,10 +1345,399 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_adjdata" name="method_get_adjdata" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">get_adjdata()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">get_adjdata(boolean  <span class="argument">$txt = TRUE</span>) : string|array</pre>
+                <p><em>returns the adjustment data</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$txt </td>
+                                <td><p>true to return string like &quot;5324=&gt;21231,3213=&gt;23123&quot; False to return array.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string|array
+                                            &mdash; <p>string adjustment data like &quot;5324=&gt;21231,3213=&gt;23123&quot; if $txt is true, or array of adjustment data if $txt if false</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_check_auto_del" name="method_check_auto_del" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">check_auto_del()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">check_auto_del(integer  <span class="argument">$off</span>) : array&lt;mixed,integer&gt;</pre>
+                <p><em>Returns array of month adjustment must be deleted if the given month adjustment deleted</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$off </td>
+                                <td><p>the index of the month adjustment you want to delete can be given by function month2off</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array&lt;mixed,integer&gt;
+                                            &mdash; <p>Array of index of month adjustment must be deleted</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_check_auto_adj" name="method_check_auto_adj" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">check_auto_adj()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">check_auto_adj(integer  <span class="argument">$off</span>, integer  <span class="argument">$v</span>) : array</pre>
+                <p><em>Gives you array of adj_data must added if you adjust the given month with the given modified julian day</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$off </td>
+                                <td><p>The index of the month to be adjusted can be given by function month2off</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$v </td>
+                                <td><p>(modified julian day) of the new start of the month</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Array of adj_data must by applied if the start of  month adjusted to the given day</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_possible_starts" name="method_get_possible_starts" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">get_possible_starts()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">get_possible_starts(integer  <span class="argument">$month</span>, integer  <span class="argument">$year</span>) : array</pre>
+                <p><em>Gets an array of possible starts of Hijri month according to Umm Al-Qura Data and current Adjustments</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$month </td>
+                                <td><p>Hijri month</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$year </td>
+                                <td><p>Hijri year</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>An array contains two numeric indexed variables (arrays) with these keys:</p>
+<div style='margin-left:20px'>
+        <dt>grdate: string</dt> <dd>gregorion date (format d/m/yyyy) of the possible start of the hijri month</dd>
+        <dt>jd: int</dt>    <dd>modifed julian day of the possible start of the hijri month</dd>
+        <dt>currentset: bool</dt>   <dd>determine whether this date is the default start of the Hijri month</dd>
+        <dt>alsoadjdata: array</dt> <dd>array contians another adjustments must be applied if the hijri month starts by this date with these keys:</dd>
+        <div style='margin-left:20px'>  <dt>month:int</dt>  <dd>The Hijri month which will be adjusted</dd>
+            <dt>year: int</dt>  <dd>The year of the hijri month which will be adjusted</dd>
+            <dt>grdate: string</dt> <dd>The new start that Hijri month must be started in gregorion date (format d/m/yyyy)</dd>
+            <dt>jd: int</dt>    <dd>The modified julian day of the new start that Hijri month must be started </dd></div></div>
+        if the given month is out of umalqura range the function will return empty array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_current_adjs" name="method_get_current_adjs" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">get_current_adjs()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">get_current_adjs() : array</pre>
+                <p><em>Gives you an array of current Umm Al-Qura adjustments</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>An array contains (arrays) of current adjustments with these keys:</p>
+<div style='margin-left:20px'>
+        <dt>month: int</dt> <dd>The hijri month</dd>
+        <dt>year: int</dt>  <dd>    The hijri year of the month</dd>
+        <dt>current: string</dt>    <dd>Current start of the Hijri month in Gregorian date, the format will be same of grdate_format option or (d/m/yyyy)</dd>
+        <dt>default: string</dt>    <dd>The original start the Hijri month in Gregorian, the format will be same of grdate_format option or (d/m/yyyy)</dd> </div>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_add_adj" name="method_add_adj" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">add_adj()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">add_adj(integer  <span class="argument">$month</span>, integer  <span class="argument">$year</span>, integer|string  <span class="argument">$new_month_start</span>) : boolean</pre>
+                <p><em>Adds or modifies adjustment to the calendar object</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$month </td>
+                                <td><p>the Hijri month</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$year </td>
+                                <td><p>the year of Hijri month</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer|string</td>
+                                <td>$new_month_start </td>
+                                <td><p>the new start of the Hijri Month can be integer (modified julian day) or string (Gregorian date (d/m/yyyy) format)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>TRUE if the succeeded or FALSE if not</p>
+<p>this will add the adjustment only to the current object if you want to save it you must use get_adj_txt()</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_del_adj" name="method_del_adj" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">del_adj()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">del_adj(integer  <span class="argument">$month</span>, integer  <span class="argument">$year</span>) : void</pre>
+                <p><em>Deletes the adjustment of the specified month</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$month </td>
+                                <td><p>the Hijri month</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$year </td>
+                                <td><p>the Hijri Year</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_auto_del_info" name="method_auto_del_info" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">auto_del_info()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">auto_del_info(integer  <span class="argument">$month</span>, integer  <span class="argument">$year</span>) : array</pre>
+                <p><em>Gives information of must delete adjustments if given month adjustment deleted</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$month </td>
+                                <td><p>the Hijri month</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$year </td>
+                                <td><p>the Hijri Year</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>array of must to delete month adjustments, keys are 'month','year'</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1.0                                
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1288,7 +1776,9 @@ calendar object these settings are:</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>

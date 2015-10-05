@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>Hijri Date Lib</title>
+    <title>API Documentation</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
 
@@ -83,7 +83,7 @@
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <i class="icon-ellipsis-vertical"></i>
             </a>
-            <a class="brand" href="../index.html">Hijri Date Lib</a>
+            <a class="brand" href="../index.html">API Documentation</a>
 
             <div class="nav-collapse">
                 <ul class="nav pull-right">
@@ -144,24 +144,25 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1200929471"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-619585045"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1200929471" class="accordion-body collapse in">
+            <div id="namespace-619585045" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1264154853"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1217578983"></a>
                                 <a href="../namespaces/hijri.html" style="margin-left: 30px; padding-left: 0">hijri</a>
             </div>
-            <div id="namespace-1264154853" class="accordion-body collapse ">
+            <div id="namespace-1217578983" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
                     <ul>
                                                                                                     <li class="class"><a href="../classes/hijri.Calendar.html">Calendar</a></li>
+                                                    <li class="class"><a href="../classes/hijri.CalendarAdjustment.html">CalendarAdjustment</a></li>
                                                     <li class="class"><a href="../classes/hijri.datetime.html">datetime</a></li>
                                             </ul>
                 </div>
@@ -194,22 +195,17 @@ This handles the Hijri Calendar beside the Gregorian Calendar</em></p>
                     <p>This class override PHP DateTime Class to show the Hijri Calendar Date and also
 showing the Gregorian Calendar Translated to Arabic Language if language set to
 'ar' the Hijri Calendar calculated depending of hijri\calendar Class which
-have two algoritms:</p>
+have two algorithms:</p>
 <ul><li>Hijri Tabular Algorithm.
 <li>Umm Al-Qura Algorithm.</ul>
 <p>to set the default setting of this class use $hijri_settings variable which
 is an array with this sample structure:</p>
 <pre><code>$hijri_settings=array(
-'langcode'=>'ar',
-'defaultformat'=>'_j _M _Yهـ',
-'umalqura'=TRUE,
-'adj_data_source' => array(
-    'type' => 'mysql',
-       'connection' => '"localhost","root","password","hijri"',
-       'get_sql' => "SELECT thevalue FROM table1 WHERE theset='hijri'",
-       'set_sql' => "UPDATE table1 SET thevalue='%s' WHERE theset='hijri'",
-    ),
-);</code></pre>
+    'langcode'=>'ar',
+    'defaultformat'=>'_j _M _Yهـ',
+    'umalqura'=TRUE,
+    'adj_data'=> '1426 => 57250, 1429 => 57339,'
+    );</code></pre>
                     
                                         
                     <section id="summary">
@@ -247,6 +243,7 @@ is an array with this sample structure:</p>
                                                             </section>
                             <section class="span4">
                                                                     <a href="../classes/hijri.datetime.html#property_hcal" class="">$hcal</a><br />
+                                                                    <a href="../classes/hijri.datetime.html#property_s_hcal" class="">$s_hcal</a><br />
                                                             </section>
                             <section class="span4">
                                 <em>N/A</em>
@@ -295,6 +292,14 @@ is an array with this sample structure:</p>
                             </th>
                             <td>
                                                                     <p>2015 Saeed Hubaishan</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                uses
+                            </th>
+                            <td>
+                                                                    <p>To convert date to hijri</p>
                                                             </td>
                         </tr>
                                             <tr>
@@ -378,7 +383,7 @@ is an array with this sample structure:</p>
 
                                 <h4>Type</h4>
                 string
-                &mdash; language code can set to &#039;ar to show Arabic Date or any other to show English date                            </article>
+                &mdash; language code can set to &#039;ar to show Arabic Date                            </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
@@ -410,7 +415,45 @@ is an array with this sample structure:</p>
                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            <p>protected var</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_s_hcal" name="property_s_hcal" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$s_hcal</h3>
+                <pre class="signature">$s_hcal : \hijri\Calendar</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                <a href="../classes/hijri.Calendar.html">\hijri\Calendar</a>
+                &mdash; static Calendar Object used to the last used Calendar                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -448,10 +491,7 @@ the user context and modify the timezone to the users selected timezone if one i
                                                     <tr>
                                 <td>string</td>
                                 <td>$langcode </td>
-                                <td><p>set the language which can be 'ar' for Arabic
-formated date or any other for English formated date, if not set
-or set to null the class will use $hijri_settings['langcode'],
-aslo if not set the default is 'ar'</p></td>
+                                <td><p>set the language which can be any of supported languages in Calendar object if not set the default is 'ar'</p></td>
                             </tr>
                                                     <tr>
                                 <td><a href="../classes/hijri.Calendar.html">\hijri\Calendar</a></td>
@@ -465,13 +505,8 @@ default settings</p></td>
                 
                 				
                                                             <h4>Examples</h4>
-                                                                <h5>Create new DateTime
-
-&lt;pre&gt;&lt;code&gt;$d= new hijri\DateTime(&quot;2015-6-14&quot;,null,&#039;ar&#039;, new hijri\Calendar([&#039;umalqura&#039;=&gt;FLASE,]));&lt;/code&gt;&lt;/pre&gt;</h5>
-                        <pre class="pre-scrollable">$c=new hijri\Calendar();
-$d=new hijri\datetime(null,null,&#039;ar&#039;,$c);
-list($cday,$cmonth,$cyear)=explode(&#039;-&#039;,$d-&gt;format(&#039;_j-_n-_Y&#039;));
-</pre>
+                                                                <h5>Create new DateTime</h5>
+                        <pre class="pre-scrollable">** File not found : &#039;examples/monthCalendar.php&#039; **</pre>
                                                 </article>
         </div>
         <aside class="span4 detailsbar">
@@ -491,7 +526,7 @@ list($cday,$cmonth,$cyear)=explode(&#039;-&#039;,$d-&gt;format(&#039;_j-_n-_Y&#0
             <article class="method">
                 <h3 class="public ">createFromHijri()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">createFromHijri(integer  <span class="argument">$year</span>, integer  <span class="argument">$month</span>, integer  <span class="argument">$day</span>) : self</pre>
+                <pre class="signature" style="margin-right: 54px;">createFromHijri(integer  <span class="argument">$year</span>, integer  <span class="argument">$month</span>, integer  <span class="argument">$day</span>, \DateTimeZone  <span class="argument">$timezone = null</span>, string  <span class="argument">$langcode = null</span>, \hijri\Calendar  <span class="argument">$hijriCalendar = null</span>) : self</pre>
                 <p><em>Create DateTime object from hijri date</em></p>
                 
 
@@ -511,6 +546,21 @@ list($cday,$cmonth,$cyear)=explode(&#039;-&#039;,$d-&gt;format(&#039;_j-_n-_Y&#0
                                 <td>integer</td>
                                 <td>$day </td>
                                 <td><p>the hijri day</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>\DateTimeZone</td>
+                                <td>$timezone </td>
+                                <td><p>Optional the time zone object</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$langcode </td>
+                                <td><p>Optional the langcode</p></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../classes/hijri.Calendar.html">\hijri\Calendar</a></td>
+                                <td>$hijriCalendar </td>
+                                <td><p>Optional the Calendar object</p></td>
                             </tr>
                                             </table>
                 
@@ -539,9 +589,9 @@ list($cday,$cmonth,$cyear)=explode(&#039;-&#039;,$d-&gt;format(&#039;_j-_n-_Y&#0
             <article class="method">
                 <h3 class="public ">format()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">format(string  <span class="argument">$format = null</span>) : string</pre>
+                <pre class="signature" style="margin-right: 54px;">format(string  <span class="argument">$format = null</span>, boolean  <span class="argument">$force_hijri = FALSE</span>) : string</pre>
                 <p><em>Formats the current date time into the specified format, this method overrides
-Datetime orgenal method,  if format charcters are
+Datetime original method,  if format characters are
 with &quot;_&quot; underscore prefix it will return hijri equivalent, if langcode
 set to &#039;ar&#039; it will return Arabic translated date for Hijri or Gregorian Calendars</em></p>
                 
@@ -564,14 +614,19 @@ The following characters are recognized to output Hijri Calendar in the format p
 <tr><td>_L</td><td>Whether it's a leap year</td><td>1 if it is a leap year, 0 otherwise</td></tr>
 <tr><td>_Y</td><td>A full numeric representation of a year, 4 digits</td><td>1380 or 1436</td></tr>
 <tr><td>_y</td><td>A two digit representation of a year</td><td>80 or 36</td></tr>
-<tr><td colspan=3>These format character will overriden if langcode set to 'ar'</td></tr>
+<tr><td colspan=3>These format character will overridden if langcode set to 'ar'</td></tr>
 <tr><td>l, D</td><td>A full textual representation of the day of the week in Arabic</td><td>السبت-الجمعة </td></tr>
 <tr><td>F</td><td>A full textual representation of a month, Syrian Name</td><td>كانون الثاني، شباط </td></tr>
-<tr><td>M</td><td>A full textual representation of a month, English tarnslated</td><td>يناير، فبراير</td></tr>
+<tr><td>M</td><td>A full textual representation of a month, English translated</td><td>يناير، فبراير</td></tr>
 <tr><td>a</td><td>Lowercase Ante meridiem and Post meridiem in Arabic</td><td>ص ، م</td></tr>
 <tr><td>A</td><td>Full Ante meridiem and Post meridiem in Arabic</td><td>صباحا ، مساء</td></tr>
 </table>
-<p>if it is not given it defaults to $hijri_setting['defaultformat'], if it is not set it defaults to '_j _M _Yهـ'</p></td>
+<p>if it is not given it defaults to $hijri_settings['defaultformat'], if it is not set it defaults to '_j _M _Yهـ'</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$force_hijri </td>
+                                <td><p>force the returned date to be Hijri if the $format does not contain underscore (_)</p></td>
                             </tr>
                                             </table>
                 
@@ -588,7 +643,14 @@ The following characters are recognized to output Hijri Calendar in the format p
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.2.0                                <p>parameter $force_hijri added</p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -716,7 +778,7 @@ The following characters are recognized to output Hijri Calendar in the format p
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on June 14th, 2015 at 23:10.
+                    on October 3rd, 2015 at 09:48.
                 </section>
             </section>
         </section>
