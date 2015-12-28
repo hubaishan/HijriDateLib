@@ -17,5 +17,6 @@ the lib has two algorithms to calculte Hijri Date:
 7. The Um Al-Qura algorithm works from 1318 A.H to 1500 A.H. and Tabular Algorithm work from year 5499 before Hijra to 1,500,000 A.H, If Um Al-Qura algorithm selected and the date out of range the uses Tabular Algorithm instead.
 8. The has full api documents.
 
-## Requerments
-The HijriDatLib requeres at php version 5.3 at least. It is compatible with php 7.
+## Requirments
+The HijriDatLib requires at php version 5.3 at least. It is compatible up to php 7.
+
