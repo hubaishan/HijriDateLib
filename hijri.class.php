@@ -734,7 +734,7 @@ class Calendar {
 					$t = 29;
 				}
 			} else {
-				$t = 29 + (($month + 1) % 2);
+				$t = 29 + ($month % 2);
 			}
 		}
 		return $t;
