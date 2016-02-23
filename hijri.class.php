@@ -2,7 +2,7 @@
 
 /**
  * Hijri Date lib
- * version 2.2.0
+ * version 2.2.1
  *
  * @desc   This Lib contains two PHP classes developed to support PHP developer 
  * 			with Hijri (Islamic) Calendar, with this lib you can show 
@@ -231,7 +231,7 @@ class datetime extends \DateTime {
 						break;
 
 					case 'M':
-						if (in_array($this->langcode, ['en', 'fr', 'de', 'es', 'pt', 'it', 'en'])) {
+						if (in_array($this->langcode, array('en', 'fr', 'de', 'es', 'pt', 'it', 'en'))) {
 							$str.=addcslashes($hsmonths[$hm], 'A..z');
 						} else {
 							$str.= addcslashes($this->hcal->month_name($hm, $this->langcode), 'A..z');
@@ -426,7 +426,7 @@ class Calendar {
 	 * @static
 	 * @var array Array of supported langcodes 
 	 */
-	public static $supported_languages = ['ar', 'en', 'fa', 'ur', 'sq', 'az', 'bn', 'bs', 'zh', 'fr', 'de', 'hi', 'id', 'ckb', 'ms', 'ru', 'es', 'tr', 'pt', 'it'];
+	public static $supported_languages = array('ar', 'en', 'fa', 'ur', 'sq', 'az', 'bn', 'bs', 'zh', 'fr', 'de', 'hi', 'id', 'ckb', 'ms', 'ru', 'es', 'tr', 'pt', 'it');
 
 	/**
 	 * Create new hijri\Calendar object according to given settings
@@ -748,64 +748,64 @@ class Calendar {
 	public function monthnames($langcode = 'ar') {
 		switch ($langcode) {
 			case 'ar':
-				$months = [1 => 'محرم', 'صفر', 'ربيع الأول', 'ربيع الثاني', 'جمادى الأولى', 'جمادى الآخرة', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذو القعدة', 'ذو الحجة'];
+				$months = array(1 => 'محرم', 'صفر', 'ربيع الأول', 'ربيع الثاني', 'جمادى الأولى', 'جمادى الآخرة', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذو القعدة', 'ذو الحجة');
 				break;
 			case 'fa':
-				$months = [ 1 => 'محرم', 'صفر ', 'ربیع‌الاول', 'ربیع‌الثانی', 'جمادی‌الاول', 'جمادی‌الثانی', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذیقعده', 'ذیحجه'];
+				$months = array( 1 => 'محرم', 'صفر ', 'ربیع‌الاول', 'ربیع‌الثانی', 'جمادی‌الاول', 'جمادی‌الثانی', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذیقعده', 'ذیحجه');
 				break;
 			case 'ur':
-				$months = [ 1 => 'محرم', 'صفر', 'ربیع الاول', 'ربیع الثانی', 'جمادی الاول', 'جمادی الثانی', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذوالقعدہ', 'ذوالحجہ'];
+				$months = array( 1 => 'محرم', 'صفر', 'ربیع الاول', 'ربیع الثانی', 'جمادی الاول', 'جمادی الثانی', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذوالقعدہ', 'ذوالحجہ');
 				break;
 			case 'sq':
-				$months = [ 1 => 'Muharrem', 'Sefer', 'Rebi el-Evvel', 'Rebi uth-Thani', 'Xhumade Ula', 'Xhumade el-Ahir', 'Rexheb', 'Sha’ban', 'Ramazani', 'Sheval', 'Dhulkade', 'Dhulhixhxhe'];
+				$months = array( 1 => 'Muharrem', 'Sefer', 'Rebi el-Evvel', 'Rebi uth-Thani', 'Xhumade Ula', 'Xhumade el-Ahir', 'Rexheb', 'Sha’ban', 'Ramazani', 'Sheval', 'Dhulkade', 'Dhulhixhxhe');
 				break;
 			case 'az':
-				$months = [ 1 => 'Məhərrəmc', 'Səfər', 'Rəbiüləvvəl', 'Rəbiülaxır', 'Cəmadiyələvvəl', 'Cəmadiyəlaxır', 'Rəcəb', 'Şaban', 'Ramazan', 'Şəvval', 'Zilqədə', 'Zilhiccə'];
+				$months = array( 1 => 'Məhərrəmc', 'Səfər', 'Rəbiüləvvəl', 'Rəbiülaxır', 'Cəmadiyələvvəl', 'Cəmadiyəlaxır', 'Rəcəb', 'Şaban', 'Ramazan', 'Şəvval', 'Zilqədə', 'Zilhiccə');
 				break;
 			case 'bn':
-				$months = [ 1 => 'মুহররম', 'সফর', 'রবিউল আউয়াল', 'রবিউস সানি', 'জমাদিউল আউয়াল', 'জমাদিউস সানি', 'রজব', 'শা\'বান', 'রমজান', 'শাওয়াল', 'জ্বিলকদ', 'জ্বিলহজ্জ'];
+				$months = array( 1 => 'মহররম', 'সফর', 'রবিউল আউয়াল', 'রবিউস সানি', 'জমাদিউল আউয়াল', 'জমাদিউস সানি', 'রজব', 'শা‘বান', 'রমজান', 'শাওয়াল', 'জ্বিলকদ', 'জ্বিলহজ্জ');
 				break;
 			case 'bs':
-				$months = [ 1 => 'Muharrem', 'Safer', 'Rebiul-evvel', 'Rebiul-ahir', 'Džumade-l-ula', 'Džumade-l-ahira', 'Redžeb', 'Ša\'ban', 'Ramazan', 'Ševval', 'Zu-l-ka\'de', 'Zu-l-hidždže'];
+				$months = array( 1 => 'Muharrem', 'Safer', 'Rebiul-evvel', 'Rebiul-ahir', 'Džumade-l-ula', 'Džumade-l-ahira', 'Redžeb', 'Ša\'ban', 'Ramazan', 'Ševval', 'Zu-l-ka\'de', 'Zu-l-hidždže');
 				break;
 			case 'zh':
-				$months = [ 1 => '穆哈兰姆月', '色法尔月', '赖比尔·敖外鲁月', '赖比尔·阿色尼月', '主马达·敖外鲁月', '主马达·阿色尼月', '赖哲卜月', '舍尔邦月', '赖买丹月', '闪瓦鲁月', '都尔喀尔德月', '都尔黑哲月'];
+				$months = array( 1 => '穆哈兰姆月', '色法尔月', '赖比尔·敖外鲁月', '赖比尔·阿色尼月', '主马达·敖外鲁月', '主马达·阿色尼月', '赖哲卜月', '舍尔邦月', '赖买丹月', '闪瓦鲁月', '都尔喀尔德月', '都尔黑哲月');
 				break;
 			case 'fr':
-				$months = [ 1 => 'Mouharram', 'Safar', 'Rabia al awal', 'Rabia ath-thani', 'Joumada al oula', 'Joumada ath-thania', 'Rajab', 'Chaabane', 'Ramadan', 'Chawwal', 'Dhou al qi`da', 'Dhou al-hijja'];
+				$months = array( 1 => 'Mouharram', 'Safar', 'Rabia al awal', 'Rabia ath-thani', 'Joumada al oula', 'Joumada ath-thania', 'Rajab', 'Chaabane', 'Ramadan', 'Chawwal', 'Dhou al qi`da', 'Dhou al-hijja');
 				break;
 			case 'de':
-				$months = [ 1 => 'Muharram', 'Safar', 'Rabiʿ al-auwal', 'Rabiʿ ath-thani', 'Dschumada l-ula', 'Dschumada th-thaniyya', 'Radschab', 'Schaʿban', 'Ramadan', 'Schawwal', 'Dhu l-qaʿda', 'Dhu l-hiddscha'];
+				$months = array( 1 => 'Muharram', 'Safar', 'Rabiʿ al-auwal', 'Rabiʿ ath-thani', 'Dschumada l-ula', 'Dschumada th-thaniyya', 'Radschab', 'Schaʿban', 'Ramadan', 'Schawwal', 'Dhu l-qaʿda', 'Dhu l-hiddscha');
 				break;
 			case 'hi':
-				$months = [ 1 => 'मुहरम', 'सफ़र', 'रबी अल-अव्वल', 'रबी अल-थानी', 'जमाद अल-उला', 'जमाद अल-थानी', 'रज्जब', 'शआबान', 'रमजा़न', 'शव्वाल', 'ज़ुअल-कादा', 'ज़ुअल-हज्जा'];
+				$months = array( 1 => 'मुहर्रम', 'सफ़र', 'रबीउल अव्वल', 'रबीउल आख़िर', 'जमादी-उल-अव्वल', 'जमादी-उल-आख़िर', 'रजब', 'शाबान', 'रमज़ान', 'शव्वाल', 'ज़िलक़ाद', 'ज़िलहिज्ज');
 				break;
 			case 'id':
-				$months = [ 1 => 'Muharram', 'Safar', 'Rabiul awal', 'Rabiul akhir', 'Jumadil awal', 'Jumadil akhir', 'Rajab', 'Sya\'ban', 'Ramadhan', 'Syawal', 'Dzulkaidah', 'Dzulhijjah',];
+				$months = array( 1 => 'Muharram', 'Safar', 'Rabiul awal', 'Rabiul akhir', 'Jumadil awal', 'Jumadil akhir', 'Rajab', 'Sya\'ban', 'Ramadhan', 'Syawal', 'Dzulkaidah', 'Dzulhijjah',);
 				break;
 			case 'ckb':
-				$months = [ 1 => 'موحەڕڕەم', 'سەفەر', 'ڕەبیعەلئەووەل', 'ڕەبیعەلئاخیر', 'جومادەلئوولا', 'جەمادەلئاخیر', 'ڕەجەب', 'شەعبان', 'ڕەمەزان', 'شەووال', 'زولقەعدە', 'زولحەججە'];
+				$months = array( 1 => 'موحەڕڕەم', 'سەفەر', 'ڕەبیعەلئەووەل', 'ڕەبیعەلئاخیر', 'جومادەلئوولا', 'جەمادەلئاخیر', 'ڕەجەب', 'شەعبان', 'ڕەمەزان', 'شەووال', 'زولقەعدە', 'زولحەججە');
 				break;
 			case 'ms':
-				$months = [ 1 => 'Muharam', 'Safar', 'Rabiulawal', 'Rabiulakhir', 'Jamadilawal', 'Jamadilakhir', 'Rejab', 'Syaaban', 'Ramadan', 'Syawal', 'Zulkaedah', 'Zulhijah'];
+				$months = array( 1 => 'Muharam', 'Safar', 'Rabiulawal', 'Rabiulakhir', 'Jamadilawal', 'Jamadilakhir', 'Rejab', 'Syaaban', 'Ramadan', 'Syawal', 'Zulkaedah', 'Zulhijah');
 				break;
 			case 'ru':
-				$months = [ 1 => 'Мухаррам', 'Сафар', 'Раби аль-авваль', 'Раби ас-сани', 'Джумада аль-уля', 'Джумада ас-сани', 'Раджаб', 'Шабан', 'Рамадан', 'Шавваль', 'Зуль-када', 'Зуль-хиджа'];
+				$months = array( 1 => 'Мухаррам', 'Сафар', 'Раби-уль-авваль', 'Раби-уль-ахир', 'Джумад-уль-авваль', 'Джумад-уль-ахир', 'Раджаб', 'Шаабан', 'Рамадан', 'Шавваль', 'Зуль-Каада', 'Зуль-Хиджжа');
 				break;
 			case 'es':
-				$months = [ 1 => 'Muharram', 'Safar', 'Rabi\' al-Awwal', 'Rabi\' al-Thani', 'Yumada al-Wula', 'Yumada al-Thania', 'Rayab', 'Sha\'abán', 'Ramadán', 'Shawwal', 'Du al-Qa\'da', 'Du al-Hiyya'];
+				$months = array( 1 => 'Muharram', 'Safar', 'Rabi\' al-Awwal', 'Rabi\' al-Thani', 'Yumada al-Wula', 'Yumada al-Thania', 'Rayab', 'Sha\'abán', 'Ramadán', 'Shawwal', 'Du al-Qa\'da', 'Du al-Hiyya');
 				break;
 			case 'tr':
-				$months = [ 1 => 'Muharrem', 'Safer', 'Rebiülevvel', 'Rebiülahir', 'Cemaziyelevvel', 'Cemaziyelahir', 'Recep', 'Şaban', 'Ramazan', 'Şevval', 'Zilkade', 'Zilhicce',];
+				$months = array( 1 => 'Muharrem', 'Safer', 'Rebiülevvel', 'Rebiülahir', 'Cemaziyelevvel', 'Cemaziyelahir', 'Recep', 'Şaban', 'Ramazan', 'Şevval', 'Zilkade', 'Zilhicce',);
 				break;
 			case 'pt':
-				$months = [ 1 => 'Muharram', 'Safar', 'Rabi al-Awwal', 'Raby al-THaany', 'Jumaada al-Awal', 'Jumaada al-THaany', 'Rajab', 'Sha\'aban', 'Ramadan', 'Shawwal', 'Dhu al-Qidah', 'Dhu al-Hija'];
+				$months = array( 1 => 'Muharram', 'Safar', 'Rabi al-Awwal', 'Raby al-THaany', 'Jumaada al-Awal', 'Jumaada al-THaany', 'Rajab', 'Sha\'aban', 'Ramadan', 'Shawwal', 'Dhu al-Qidah', 'Dhu al-Hija');
 				break;
 			case 'it':
-				$months = [ 1 => 'Muhàrram', 'Sàfar', 'Rabì‘ al-àwwal', 'Rabì‘ ath-thàni', 'Jumàda al-àwwal', 'Jumàda al-akhìra', 'Ràjab', 'Sha‘bàn', 'Ramadàn', 'Shawwàl', 'Dhu l-qà‘da', 'Dhu l-hìjja'];
+				$months = array( 1 => 'Muhàrram', 'Sàfar', 'Rabì‘ al-àwwal', 'Rabì‘ ath-thàni', 'Jumàda al-àwwal', 'Jumàda al-akhìra', 'Ràjab', 'Sha‘bàn', 'Ramadàn', 'Shawwàl', 'Dhu l-qà‘da', 'Dhu l-hìjja');
 				break;
 			default :
-				$months = [1 => 'Muharram', 'Safar', 'Rabi Al Awwal', 'Rabi Al Thani', 'Jumada Al Oula', 'Jumada Al Akhira', 'Rajab', 'Shaban', 'Ramadan', 'Shawwal', 'Dhul Qidah', 'Dhul Hijjah'];
+				$months = array(1 => 'Muharram', 'Safar', 'Rabi Al Awwal', 'Rabi Al Thani', 'Jumada Al Oula', 'Jumada Al Akhira', 'Rajab', 'Shaban', 'Ramadan', 'Shawwal', 'Dhul Qidah', 'Dhul Hijjah');
 				break;
 		}
 		return $months;
@@ -821,7 +821,7 @@ class Calendar {
 	 */
 	public function month_name($month, $langcode = 'ar', $short = FALSE) {
 
-		if ($short && in_array($langcode, ['en', 'fr', 'de', 'es', 'pt', 'it', 'en'])) {
+		if ($short && in_array($langcode, array('en', 'fr', 'de', 'es', 'pt', 'it', 'en'))) {
 			$hsmonths = array(1 => 'Muh', 'Saf', 'Rb1', 'Rb2', 'Jm1', 'Jm2', 'Raj', 'Sha', 'Ram', 'Shw', 'Qid', 'Hij');
 			return $hsmonths[$month];
 		} else {

@@ -5,6 +5,7 @@
  * by Saeed Hubaishan
  */
 require_once '../hijri.class.php';
+date_default_timezone_set('Asia/Aden');
 function buildMonthCal($month,$year,$outmonth=FALSE)
 {
 $c=new hijri\Calendar();
@@ -17,7 +18,7 @@ $d->setDateHijri($year, $month, 1);
 list($start_wd,$month_name,$gm1,$gy1)=explode('-',$d->format("w-_M-M-Y"));
 	$title=$month_name." ".$year."هـ (".$gm1.(($gy2!=$gy1)? " ".$gy1 : '').(($gm2!=$gm1)? "-".$gm2 : '')." ".$gy2. "م)";
 
-$wd=[0=>1,2,3,4,5,6,0];
+$wd= array(0=>1,2,3,4,5,6,0,);
 	$month_length=$c->days_in_month($month,$year);
 $b_month=$month-1;
 $b_year=$year;
@@ -134,7 +135,6 @@ if (isset($_REQUEST['month']) && isset($_REQUEST['year']))
     text-align: center;
 }
 #calendar .navigation .prev, #calendar .navigation .next {
-    //background-image: url(../images/nav.png);
     text-decoration:none;
 	color: #FFFFFF;
 	height: 24px;
