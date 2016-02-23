@@ -825,7 +825,8 @@ class Calendar {
 			$hsmonths = array(1 => 'Muh', 'Saf', 'Rb1', 'Rb2', 'Jm1', 'Jm2', 'Raj', 'Sha', 'Ram', 'Shw', 'Qid', 'Hij');
 			return $hsmonths[$month];
 		} else {
-			return $this->monthnames($langcode)[$month];
+			$mymonth_names=$this->monthnames($langcode);
+			return $mymonth_names[$month];
 		}
 	}
 
@@ -962,7 +963,7 @@ class CalendarAdjustment Extends Calendar {
 		$ii = floor(($off) / 12);
 		$hy = static::umstartyear + $ii;
 		$hm = $off + 1 - 12 * $ii;
-		return [$hm, $hy];
+		return array($hm, $hy);
 	}
 
 	/**
@@ -1205,7 +1206,8 @@ class CalendarAdjustment Extends Calendar {
 		$jddate = jdtogregorian(2400000 + $jd);
 
 		if (isset($this->grdate_format)) {
-			return (new datetime($jddate))->format($this->grdate_format);
+			$dt=new \datetime($jddate);
+			return $dt->format($this->grdate_format);
 		} else {
 			list($gm, $gd, $gy) = explode('/', $jddate);
 			return "$gd-$gm-$gy";
