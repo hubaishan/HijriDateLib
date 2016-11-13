@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>API Documentation</title>
+    <title>HijriDateLib</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
 
@@ -83,7 +83,7 @@
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <i class="icon-ellipsis-vertical"></i>
             </a>
-            <a class="brand" href="../index.html">API Documentation</a>
+            <a class="brand" href="../index.html">HijriDateLib</a>
 
             <div class="nav-collapse">
                 <ul class="nav pull-right">
@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-619585045"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1524759638"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-619585045" class="accordion-body collapse in">
+            <div id="namespace-1524759638" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1217578983"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1701977445"></a>
                                 <a href="../namespaces/hijri.html" style="margin-left: 30px; padding-left: 0">hijri</a>
             </div>
-            <div id="namespace-1217578983" class="accordion-body collapse ">
+            <div id="namespace-1701977445" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -201,11 +201,11 @@ have two algorithms:</p>
 <p>to set the default setting of this class use $hijri_settings variable which
 is an array with this sample structure:</p>
 <pre><code>$hijri_settings=array(
-    'langcode'=>'ar',
-    'defaultformat'=>'_j _M _Yهـ',
-    'umalqura'=TRUE,
-    'adj_data'=> '1426 => 57250, 1429 => 57339,'
-    );</code></pre>
+'langcode'=>'ar',
+'defaultformat'=>'_j _M _Yهـ',
+'umalqura'=TRUE,
+'adj_data'=> array(1426 => 57250, 1429 => 57339,)
+);</code></pre>
                     
                                         
                     <section id="summary">
@@ -291,7 +291,7 @@ is an array with this sample structure:</p>
                                 copyright
                             </th>
                             <td>
-                                                                    <p>2015 Saeed Hubaishan</p>
+                                                                    <p>2015-2016 Saeed Hubaishan</p>
                                                             </td>
                         </tr>
                                             <tr>
@@ -383,7 +383,7 @@ is an array with this sample structure:</p>
 
                                 <h4>Type</h4>
                 string
-                &mdash; language code can set to &#039;ar to show Arabic Date                            </article>
+                &mdash; language code can set to &#039;ar&#039; to show Arabic Date                            </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
@@ -591,7 +591,7 @@ default settings</p></td>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">format(string  <span class="argument">$format = null</span>, boolean  <span class="argument">$force_hijri = FALSE</span>) : string</pre>
                 <p><em>Formats the current date time into the specified format, this method overrides
-Datetime original method,  if format characters are
+Datetime original method, if format characters are
 with &quot;_&quot; underscore prefix it will return hijri equivalent, if langcode
 set to &#039;ar&#039; it will return Arabic translated date for Hijri or Gregorian Calendars</em></p>
                 
@@ -604,24 +604,24 @@ set to &#039;ar&#039; it will return Arabic translated date for Hijri or Gregori
                                 <td><p>Optional format to use for output
 The following characters are recognized to output Hijri Calendar in the format parameter string</p>
 <table><tr><th>format character</th><th>Description</th><th>Example Output</th></tr>
-<tr><td>_j</td><td>Day of the hijri month without leading zeros 1 to 30</td><td>1-30</td></tr>
-<tr><td>_d</td><td>Day of the hijri month with leading zeros 01 to 30</td><td>01-30</td></tr>
-<tr><td>_z</td><td>The day of the year (starting from 0)</td><td>0-354</td></tr>
-<tr><td>_F</td><td>A full textual representation of a month, such as Muharram or Safar</td><td>Muharram-Dhul Hijjah</td></tr>
-<tr><td>_M</td><td>A short textual representation of a month, three letters(in Arabic same as _F)</td><td>Muh-Hij</td></tr>
-<tr><td>_m</td><td>Numeric representation of a month, with leading zeros</td><td>01-12</td></tr>
-<tr><td>_n</td><td>Numeric representation of a month, without leading zeros</td><td>1-12</td></tr>
-<tr><td>_L</td><td>Whether it's a leap year</td><td>1 if it is a leap year, 0 otherwise</td></tr>
-<tr><td>_Y</td><td>A full numeric representation of a year, 4 digits</td><td>1380 or 1436</td></tr>
-<tr><td>_y</td><td>A two digit representation of a year</td><td>80 or 36</td></tr>
-<tr><td colspan=3>These format character will overridden if langcode set to 'ar'</td></tr>
-<tr><td>l, D</td><td>A full textual representation of the day of the week in Arabic</td><td>السبت-الجمعة </td></tr>
-<tr><td>F</td><td>A full textual representation of a month, Syrian Name</td><td>كانون الثاني، شباط </td></tr>
-<tr><td>M</td><td>A full textual representation of a month, English translated</td><td>يناير، فبراير</td></tr>
-<tr><td>a</td><td>Lowercase Ante meridiem and Post meridiem in Arabic</td><td>ص ، م</td></tr>
-<tr><td>A</td><td>Full Ante meridiem and Post meridiem in Arabic</td><td>صباحا ، مساء</td></tr>
-</table>
-<p>if it is not given it defaults to $hijri_settings['defaultformat'], if it is not set it defaults to '_j _M _Yهـ'</p></td>
+        <tr><td>_j</td><td>Day of the hijri month without leading zeros 1 to 30</td><td>1-30</td></tr>
+        <tr><td>_d</td><td>Day of the hijri month with leading zeros 01 to 30</td><td>01-30</td></tr>
+        <tr><td>_z</td><td>The day of the year (starting from 0)</td><td>0-354</td></tr>
+        <tr><td>_F</td><td>A full textual representation of a month, such as Muharram or Safar</td><td>Muharram-Dhul Hijjah</td></tr>
+        <tr><td>_M</td><td>A short textual representation of a month, three letters(in Arabic same as _F)</td><td>Muh-Hij</td></tr>
+        <tr><td>_m</td><td>Numeric representation of a month, with leading zeros</td><td>01-12</td></tr>
+        <tr><td>_n</td><td>Numeric representation of a month, without leading zeros</td><td>1-12</td></tr>
+        <tr><td>_L</td><td>Whether it's a leap year</td><td>1 if it is a leap year, 0 otherwise</td></tr>
+        <tr><td>_Y</td><td>A full numeric representation of a year, 4 digits</td><td>1380 or 1436</td></tr>
+        <tr><td>_y</td><td>A two digit representation of a year</td><td>80 or 36</td></tr>
+        <tr><td colspan=3>These format character will overridden if langcode set to 'ar'</td></tr>
+        <tr><td>l, D</td><td>A full textual representation of the day of the week in Arabic</td><td>السبت-الجمعة </td></tr>
+        <tr><td>F</td><td>A full textual representation of a month, Syrian Name</td><td>كانون الثاني، شباط </td></tr>
+        <tr><td>M</td><td>A full textual representation of a month, English translated</td><td>يناير، فبراير</td></tr>
+        <tr><td>a</td><td>Lowercase Ante meridiem and Post meridiem in Arabic</td><td>ص ، م</td></tr>
+        <tr><td>A</td><td>Full Ante meridiem and Post meridiem in Arabic</td><td>صباحا ، مساء</td></tr>
+        </table>
+<pre><code>    if it is not given it defaults to $hijri_settings['defaultformat'], if it is not set it defaults to '_j _M _Yهـ'</code></pre></td>
                             </tr>
                                                     <tr>
                                 <td>boolean</td>
@@ -778,7 +778,7 @@ The following characters are recognized to output Hijri Calendar in the format p
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on October 3rd, 2015 at 09:48.
+                    on November 13th, 2016 at 09:02.
                 </section>
             </section>
         </section>

@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>API Documentation</title>
+    <title>HijriDateLib</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
 
@@ -83,7 +83,7 @@
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <i class="icon-ellipsis-vertical"></i>
             </a>
-            <a class="brand" href="../index.html">API Documentation</a>
+            <a class="brand" href="../index.html">HijriDateLib</a>
 
             <div class="nav-collapse">
                 <ul class="nav pull-right">
@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1694741331"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1016087936"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1694741331" class="accordion-body collapse in">
+            <div id="namespace-1016087936" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1775636672"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1210514047"></a>
                                 <a href="../namespaces/hijri.html" style="margin-left: 30px; padding-left: 0">hijri</a>
             </div>
-            <div id="namespace-1775636672" class="accordion-body collapse ">
+            <div id="namespace-1210514047" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -194,12 +194,12 @@
                     <p>to set the default setting of this class use $hijri_settings variable which
 is an array with this sample structure:</p>
 <pre><code>$hijri_settings=array(
-    'langcode'=>'ar',
-    'defaultformat'=>'_j _M _Yهـ',
-    'umalqura'=> TRUE,
-    'adj_data'=> '1426 => 57250, 1429 => 57339,'
-    'grdate_format' => 'j M Y',
-    );</code></pre>
+'langcode'=>'ar',
+'defaultformat'=>'_j _M _Yهـ',
+'umalqura'=> TRUE,
+'adj_data'=> array(1426 => 57250, 1429 => 57339,),
+'grdate_format' => 'j M Y',
+);</code></pre>
                     
                                         
                     <section id="summary">
@@ -232,6 +232,7 @@ is an array with this sample structure:</p>
                                                                     <a href="../classes/hijri.Calendar.html#method_month_name" class="">month_name()</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#method_leap_year" class="">leap_year()</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#method_checkHijriDate" class="">checkHijriDate()</a><br />
+                                                                    <a href="../classes/hijri.Calendar.html#method_english_suffix" class="">english_suffix()</a><br />
                                                                     <a href="../classes/hijri.CalendarAdjustment.html#method_get_adjdata" class="">get_adjdata()</a><br />
                                                                     <a href="../classes/hijri.CalendarAdjustment.html#method_check_auto_del" class="">check_auto_del()</a><br />
                                                                     <a href="../classes/hijri.CalendarAdjustment.html#method_check_auto_adj" class="">check_auto_adj()</a><br />
@@ -250,6 +251,7 @@ is an array with this sample structure:</p>
                                                                     <a href="../classes/hijri.Calendar.html#constant_umendyear" class="">umendyear</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#constant_umstartjd" class="">umstartjd</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#constant_umendjd" class="">umendjd</a><br />
+                                                                    <a href="../classes/hijri.Calendar.html#constant_mjd_factor" class="">mjd_factor</a><br />
                                                             </section>
                         </section>
                         <section class="row-fluid protected">
@@ -307,7 +309,7 @@ is an array with this sample structure:</p>
                                 copyright
                             </th>
                             <td>
-                                                                    <p>2015 Saeed Hubaishan</p>
+                                                                    <p>2015-2016 Saeed Hubaishan</p>
                                                             </td>
                         </tr>
                                             <tr>
@@ -438,7 +440,30 @@ is an array with this sample structure:</p>
             <article id="constant_umendjd" class="constant">
                 <h3 class="">umendjd</h3>
                 <pre class="signature">umendjd</pre>
-                <p><em>the Um Al-Qura Calendar end  Julian day</em></p>
+                <p><em>the Um Al-Qura Calendar end Julian day</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_mjd_factor" name="constant_mjd_factor" class="anchor"></a>
+            <article id="constant_mjd_factor" class="constant">
+                <h3 class="">mjd_factor</h3>
+                <pre class="signature">mjd_factor</pre>
+                <p><em>int factor for convert julianday to modified julianday</em></p>
                 
             </article>
         </div>
@@ -648,9 +673,9 @@ is an array with this sample structure:</p>
                                 <td><p>Array contains one or more settings of the hijri
 CalendarAdjustment object these settings are:</p>
 <div style='margin-left:20px'>
-        <dt>adj_data: string|array</dt>     <dd>string: contains Um Al-Qura adjustment data that got by function get_adjdata(TRUE) of CalendarAdjustment class
-                                                or array contains Um Al-Qura adjustment data that got by function get_adjdata(FALSE)</dd>
-        <dt>grdate_format: string</dt>      <dd>date format to show the Gregorian dates in adjustment process</dd><div>
+        <dt>adj_data: string|array</dt> <dd>string: contains Um Al-Qura adjustment data that got by function get_adjdata(TRUE) of CalendarAdjustment class
+        or array contains Um Al-Qura adjustment data that got by function get_adjdata(FALSE)</dd>
+        <dt>grdate_format: string</dt> <dd>date format to show the Gregorian dates in adjustment process</dd><div>
         if not set, the defaults from $hijri_settings global variable will be used.</td>
                             </tr>
                                             </table>
@@ -839,12 +864,12 @@ CalendarAdjustment object these settings are:</p>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$year </td>
-                                <td><p>the Hijri  year</p></td>
+                                <td><p>the Hijri year</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$month </td>
-                                <td><p>the Hijri  month</p></td>
+                                <td><p>the Hijri month</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
@@ -937,12 +962,12 @@ CalendarAdjustment object these settings are:</p>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$year </td>
-                                <td><p>the Hijri  year</p></td>
+                                <td><p>the Hijri year</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$month </td>
-                                <td><p>the Hijri  month</p></td>
+                                <td><p>the Hijri month</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
@@ -1035,12 +1060,12 @@ CalendarAdjustment object these settings are:</p>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$year </td>
-                                <td><p>the Hijri  year</p></td>
+                                <td><p>the Hijri year</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$month </td>
-                                <td><p>the Hijri  month</p></td>
+                                <td><p>the Hijri month</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
@@ -1357,6 +1382,52 @@ CalendarAdjustment object these settings are:</p>
 
                                     <div class="row-fluid">
         <div class="span8 content class">
+            <a id="method_english_suffix" name="method_english_suffix" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">english_suffix()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">english_suffix(integer  <span class="argument">$number</span>) : string</pre>
+                <p><em>returns english suffix for number</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$number </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/hijri.Calendar.html"><div class="path-wrapper">\hijri\Calendar</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
             <a id="method_get_adjdata" name="method_get_adjdata" class="anchor"></a>
             <article class="method">
                 <h3 class="public ">get_adjdata()</h3>
@@ -1370,14 +1441,14 @@ CalendarAdjustment object these settings are:</p>
                                                     <tr>
                                 <td>boolean</td>
                                 <td>$txt </td>
-                                <td><p>true to return string like &quot;5324=&gt;21231,3213=&gt;23123&quot; False to return array.</p></td>
+                                <td><p>true to return a json encoded array string False to return array.</p></td>
                             </tr>
                                             </table>
                 
                 
                                     <h4>Returns</h4>
                     string|array
-                                            &mdash; <p>string adjustment data like &quot;5324=&gt;21231,3213=&gt;23123&quot; if $txt is true, or array of adjustment data if $txt if false</p>
+                                            &mdash; <p>string json encoded array adjustment data if $txt is true, or array of adjustment data if $txt if false</p>
                                     				
                             </article>
         </div>
@@ -1392,6 +1463,7 @@ CalendarAdjustment object these settings are:</p>
                             since
                         </th>
                         <td>
+                                                            2.3.0                                <p>returned string is json encoded array</p>
                                                             2.1.0                                
                                                     </td>
                     </tr>
@@ -1470,7 +1542,7 @@ CalendarAdjustment object these settings are:</p>
                 
                                     <h4>Returns</h4>
                     array
-                                            &mdash; <p>Array of adj_data must by applied if the start of  month adjusted to the given day</p>
+                                            &mdash; <p>Array of adj_data must by applied if the start of month adjusted to the given day</p>
                                     				
                             </article>
         </div>
@@ -1522,13 +1594,13 @@ CalendarAdjustment object these settings are:</p>
                                             &mdash; <p>An array contains two numeric indexed variables (arrays) with these keys:</p>
 <div style='margin-left:20px'>
         <dt>grdate: string</dt> <dd>gregorion date (format d/m/yyyy) of the possible start of the hijri month</dd>
-        <dt>jd: int</dt>    <dd>modifed julian day of the possible start of the hijri month</dd>
-        <dt>currentset: bool</dt>   <dd>determine whether this date is the default start of the Hijri month</dd>
+        <dt>jd: int</dt> <dd>modifed julian day of the possible start of the hijri month</dd>
+        <dt>currentset: bool</dt> <dd>determine whether this date is the default start of the Hijri month</dd>
         <dt>alsoadjdata: array</dt> <dd>array contians another adjustments must be applied if the hijri month starts by this date with these keys:</dd>
-        <div style='margin-left:20px'>  <dt>month:int</dt>  <dd>The Hijri month which will be adjusted</dd>
-            <dt>year: int</dt>  <dd>The year of the hijri month which will be adjusted</dd>
-            <dt>grdate: string</dt> <dd>The new start that Hijri month must be started in gregorion date (format d/m/yyyy)</dd>
-            <dt>jd: int</dt>    <dd>The modified julian day of the new start that Hijri month must be started </dd></div></div>
+        <div style='margin-left:20px'> <dt>month:int</dt> <dd>The Hijri month which will be adjusted</dd>
+        <dt>year: int</dt> <dd>The year of the hijri month which will be adjusted</dd>
+        <dt>grdate: string</dt> <dd>The new start that Hijri month must be started in gregorion date (format d/m/yyyy)</dd>
+        <dt>jd: int</dt> <dd>The modified julian day of the new start that Hijri month must be started </dd></div></div>
         if the given month is out of umalqura range the function will return empty array
                                     				
                             </article>
@@ -1568,9 +1640,9 @@ CalendarAdjustment object these settings are:</p>
                                             &mdash; <p>An array contains (arrays) of current adjustments with these keys:</p>
 <div style='margin-left:20px'>
         <dt>month: int</dt> <dd>The hijri month</dd>
-        <dt>year: int</dt>  <dd>    The hijri year of the month</dd>
-        <dt>current: string</dt>    <dd>Current start of the Hijri month in Gregorian date, the format will be same of grdate_format option or (d/m/yyyy)</dd>
-        <dt>default: string</dt>    <dd>The original start the Hijri month in Gregorian, the format will be same of grdate_format option or (d/m/yyyy)</dd> </div>
+        <dt>year: int</dt> <dd> The hijri year of the month</dd>
+        <dt>current: string</dt> <dd>Current start of the Hijri month in Gregorian date, the format will be same of grdate_format option or (d/m/yyyy)</dd>
+        <dt>default: string</dt> <dd>The original start the Hijri month in Gregorian, the format will be same of grdate_format option or (d/m/yyyy)</dd> </div>
                                     				
                             </article>
         </div>
@@ -1625,7 +1697,7 @@ CalendarAdjustment object these settings are:</p>
                                     <h4>Returns</h4>
                     boolean
                                             &mdash; <p>TRUE if the succeeded or FALSE if not</p>
-<p>this will add the adjustment only to the current object if you want to save it you must use get_adj_txt()</p>
+<pre><code>    this will add the adjustment only to the current object if you want to save it you must use get_adj_txt()</code></pre>
                                     				
                             </article>
         </div>
@@ -1836,7 +1908,7 @@ CalendarAdjustment object these settings are:</p>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on October 3rd, 2015 at 09:48.
+                    on November 13th, 2016 at 09:02.
                 </section>
             </section>
         </section>

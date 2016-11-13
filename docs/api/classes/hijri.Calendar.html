@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>API Documentation</title>
+    <title>HijriDateLib</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
 
@@ -83,7 +83,7 @@
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <i class="icon-ellipsis-vertical"></i>
             </a>
-            <a class="brand" href="../index.html">API Documentation</a>
+            <a class="brand" href="../index.html">HijriDateLib</a>
 
             <div class="nav-collapse">
                 <ul class="nav pull-right">
@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1047412106"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-2116473293"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1047412106" class="accordion-body collapse in">
+            <div id="namespace-2116473293" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1730452149"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1928520767"></a>
                                 <a href="../namespaces/hijri.html" style="margin-left: 30px; padding-left: 0">hijri</a>
             </div>
-            <div id="namespace-1730452149" class="accordion-body collapse ">
+            <div id="namespace-1928520767" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -195,7 +195,7 @@
 it is work with Hijri Calendar.
 The Class has two algorithms to calculate the Hijri Date</p>
 <dt>Hijri Tabular Algorithm:</dt><dd>This algorithm was used by past to simplify
-the Hijri Calendar calculation, The result of this algorithm  identical to Hijri
+the Hijri Calendar calculation, The result of this algorithm identical to Hijri
 Calendar in Microsoft programs and "The Calendar of Centuries-تقويم القرون"
 book of "Saleh Alojiry صالح العجيري".</dd>
 <dt>Umm Al-Qura Algorithm(Recommended).</dt><dd>This is the official calendar of Saudi Arabia
@@ -205,12 +205,12 @@ of this algorithm can be adjusted by using CalendarAdjustment Class see file adj
 to set the default setting of this class use $hijri_settings variable which
 is an array with this sample structure:
 <pre><code>$hijri_settings=array(
-    'langcode'=>'ar',
-    'defaultformat'=>'_j _M _Yهـ',
-    'umalqura'=> TRUE,
-    'adj_data'=> '1426 => 57250, 1429 => 57339,'
-    'grdate_format' => 'j M Y',
-    );</code></pre>
+'langcode'=>'ar',
+'defaultformat'=>'_j _M _Yهـ',
+'umalqura'=> TRUE,
+'adj_data'=> array(1426 => 57250, 1429 => 57339,),
+'grdate_format' => 'j M Y',
+);</code></pre>
                     
                                         
                     <section id="summary">
@@ -243,6 +243,7 @@ is an array with this sample structure:
                                                                     <a href="../classes/hijri.Calendar.html#method_month_name" class="">month_name()</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#method_leap_year" class="">leap_year()</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#method_checkHijriDate" class="">checkHijriDate()</a><br />
+                                                                    <a href="../classes/hijri.Calendar.html#method_english_suffix" class="">english_suffix()</a><br />
                                                             </section>
                             <section class="span4">
                                                                     <a href="../classes/hijri.Calendar.html#property_umalqura" class="">$umalqura</a><br />
@@ -253,6 +254,7 @@ is an array with this sample structure:
                                                                     <a href="../classes/hijri.Calendar.html#constant_umendyear" class="">umendyear</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#constant_umstartjd" class="">umstartjd</a><br />
                                                                     <a href="../classes/hijri.Calendar.html#constant_umendjd" class="">umendjd</a><br />
+                                                                    <a href="../classes/hijri.Calendar.html#constant_mjd_factor" class="">mjd_factor</a><br />
                                                             </section>
                         </section>
                         <section class="row-fluid protected">
@@ -307,7 +309,7 @@ is an array with this sample structure:
                                 copyright
                             </th>
                             <td>
-                                                                    <p>2015 Saeed Hubaishan</p>
+                                                                    <p>2015-2016 Saeed Hubaishan</p>
                                                             </td>
                         </tr>
                                             <tr>
@@ -341,6 +343,14 @@ is an array with this sample structure:
                             </th>
                             <td>
                                                                     <p>datetime, calendar</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                since
+                            </th>
+                            <td>
+                                                                    <p>$hijri_sittings['adj_data'] must be an array or string contains a serialiezed array</p>
                                                             </td>
                         </tr>
                                         </table>
@@ -424,7 +434,28 @@ is an array with this sample structure:
             <article id="constant_umendjd" class="constant">
                 <h3 class="">umendjd</h3>
                 <pre class="signature">umendjd</pre>
-                <p><em>the Um Al-Qura Calendar end  Julian day</em></p>
+                <p><em>the Um Al-Qura Calendar end Julian day</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_mjd_factor" name="constant_mjd_factor" class="anchor"></a>
+            <article id="constant_mjd_factor" class="constant">
+                <h3 class="">mjd_factor</h3>
+                <pre class="signature">mjd_factor</pre>
+                <p><em>int factor for convert julianday to modified julianday</em></p>
                 
             </article>
         </div>
@@ -577,7 +608,7 @@ is an array with this sample structure:
 calendar object these settings are:</p>
 <dt>umalqura:bool</dt> <dd> TRUE to use Um AlQura algorithm, FALSE to use Hijri Tabular algorithm</dd>
         <dt>adj_data:string|array</dt> <dd>string: contains Um Al-Qura adjustment data that got by function get_adjdata(TRUE) of CalendarAdjustment class
-                                            or array contains Um Al-Qura adjustment data that got by function get_adjdata(FALSE)</dd>
+        or array contains Um Al-Qura adjustment data that got by function get_adjdata(FALSE)</dd>
         if not set, the defaults from $hijri_settings global variable will be used.</td>
                             </tr>
                                             </table>
@@ -760,12 +791,12 @@ calendar object these settings are:</p>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$year </td>
-                                <td><p>the Hijri  year</p></td>
+                                <td><p>the Hijri year</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$month </td>
-                                <td><p>the Hijri  month</p></td>
+                                <td><p>the Hijri month</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
@@ -854,12 +885,12 @@ calendar object these settings are:</p>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$year </td>
-                                <td><p>the Hijri  year</p></td>
+                                <td><p>the Hijri year</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$month </td>
-                                <td><p>the Hijri  month</p></td>
+                                <td><p>the Hijri month</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
@@ -948,12 +979,12 @@ calendar object these settings are:</p>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$year </td>
-                                <td><p>the Hijri  year</p></td>
+                                <td><p>the Hijri year</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
                                 <td>$month </td>
-                                <td><p>the Hijri  month</p></td>
+                                <td><p>the Hijri month</p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
@@ -1254,6 +1285,50 @@ calendar object these settings are:</p>
         </aside>
     </div>
 
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_english_suffix" name="method_english_suffix" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">english_suffix()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">english_suffix(integer  <span class="argument">$number</span>) : string</pre>
+                <p><em>returns english suffix for number</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$number </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
                                                     <div class="row-fluid">
         <div class="span8 content class">
             <a id="method_get_umalquradata" name="method_get_umalquradata" class="anchor"></a>
@@ -1346,7 +1421,7 @@ calendar object these settings are:</p>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on October 3rd, 2015 at 09:48.
+                    on November 13th, 2016 at 09:02.
                 </section>
             </section>
         </section>
