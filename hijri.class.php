@@ -168,6 +168,7 @@ class datetime extends \DateTime
 	 *        	<table><tr><th>format character</th><th>Description</th><th>Example Output</th></tr>
 	 *        	<tr><td>_j</td><td>Day of the hijri month without leading zeros 1 to 30</td><td>1-30</td></tr>
 	 *        	<tr><td>_d</td><td>Day of the hijri month with leading zeros 01 to 30</td><td>01-30</td></tr>
+	 *        	<tr><td>_S</td><td>English suffix for numbers (new in 2.3.0)</td><td>st, nd ,th</td></tr>
 	 *        	<tr><td>_z</td><td>The day of the year (starting from 0)</td><td>0-354</td></tr>
 	 *        	<tr><td>_F</td><td>A full textual representation of a month, such as Muharram or Safar</td><td>Muharram-Dhul Hijjah</td></tr>
 	 *        	<tr><td>_M</td><td>A short textual representation of a month, three letters(in Arabic same as _F)</td><td>Muh-Hij</td></tr>
@@ -419,7 +420,8 @@ class datetime extends \DateTime
  * @version 2.3.0
  * @category datetime, calendar
  * @link http://salafitech.net
- * @since 2.3.0 $hijri_sittings['adj_data'] must be an array or string contains a serialiezed array
+ * @since 2.3.0 
+ * $hijri_sittings['adj_data'] must be an array or string contains a serialiezed array
  */
 class Calendar
 {
