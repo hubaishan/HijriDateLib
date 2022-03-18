@@ -7,20 +7,21 @@
 require_once '../hijri.class.php';
 date_default_timezone_set('Asia/Aden');
 
-function buildMonthCal($month, $year, $outmonth = FALSE)
+function buildMonthCalGre($month, $year, $outmonth = FALSE)
 {
 	$c = new hijri\Calendar();
 	$d = new hijri\datetime('now', null, 'ar', $c);
-	list($cday, $cmonth, $cyear) = explode('-', $d->format('_j-_n-_Y'));
-	
-	$d->setDateHijri($year, $month + 1, 0);
-	list($gm2, $gy2) = explode('-', $d->format("M-Y"));
-	$d->setDateHijri($year, $month, 1);
-	list($start_wd, $month_name, $gm1, $gy1) = explode('-', $d->format("w-_M-M-Y"));
-	$title = $month_name . " " . $year . "هـ (" . $gm1 . (($gy2 != $gy1) ? " " . $gy1 : '') . (($gm2 != $gm1) ? "-" . $gm2 : '') . " " . $gy2 . "م)";
+    
+    list($cday, $cmonth, $cyear) = explode('-', $d->format('j-n-Y'));
+	$month_length=cal_days_in_month(CAL_GREGORIAN, $month, $year);
+	$d->setDate($year, $month , $month_length);
+    //$d->modify('+' . ($month_length-1) .'day');
+	list($gm2, $gy2) = explode('-', $d->format("_M-_Y"));
+	$d->setDate($year, $month, 1);
+	list($start_wd, $month_name, $gm1, $gy1) = explode('-', $d->format("w-M-_M-_Y"));
+	$title = $month_name . " " . $year . "م (" . $gm1 . (($gy2 != $gy1) ? " " . $gy1 : '') . (($gm2 != $gm1) ? "-" . $gm2 : '') . " " . $gy2 . "هـ)";
 	
 	$wd = array(0 => 1, 2, 3, 4, 5, 6, 0);
-	$month_length = $c->days_in_month($month, $year);
 	$b_month = $month - 1;
 	$b_year = $year;
 	if ($b_month == 0) {
@@ -33,7 +34,7 @@ function buildMonthCal($month, $year, $outmonth = FALSE)
 		$a_month = 1;
 		$a_year++;
 	}
-	echo '<div class="navigation"><a class="prev" href="monthCalendar.php?month=' . $b_month . '&year=' . $b_year . '">&lt;</a>' . '<div class="title" >' . $title . '<a class= "next" href="monthCalendar.php?month=' . $a_month . '&year=' . $a_year . '">&gt;</a>' . '</div>
+	echo '<div class="navigation"><a class="prev" href="monthCalendarGre.php?month=' . $b_month . '&year=' . $b_year . '">&lt;</a>' . '<div class="title" >' . $title . '<a class= "next" href="monthCalendarGre.php?month=' . $a_month . '&year=' . $a_year . '">&gt;</a>' . '</div>
 </div>';
 	if ($wd[$start_wd] > 0) {
 		$d->modify("-" . $wd[$start_wd] . " day");
@@ -50,7 +51,7 @@ function buildMonthCal($month, $year, $outmonth = FALSE)
     </tr>';
 	$dayw = 0;
 	do {
-		list($hd, $hm, $hy, $gd, $gm, $gy) = explode('-', $d->format("_j-_n-_Y-j-n-Y"));
+		list($hd, $hm, $hy, $gd, $gm, $gy) = explode('-', $d->format("j-n-Y-_j-_n-_Y"));
 		if ($dayw == 0) {
 			echo "<tr>";
 		}
@@ -75,7 +76,7 @@ function buildMonthCal($month, $year, $outmonth = FALSE)
 	echo '</td></tr></table>';
 }
 $d = new hijri\datetime();
-list($year, $month) = explode(' ', $d->format('_Y _n'));
+list($year, $month) = explode(' ', $d->format('Y n'));
 // echo is_integer($_REQUEST['month'])).$_REQUEST['year'];
 if (isset($_REQUEST['month']) && isset($_REQUEST['year'])) {
 	$tmonth = (int) $_REQUEST['month'];
@@ -214,7 +215,7 @@ if (isset($_REQUEST['month']) && isset($_REQUEST['year'])) {
 <body>
 	<div id="calendar">
 <?php
-buildMonthCal($month, $year)?>
+buildMonthCalGre($month, $year)?>
     </div>
 </body>
 </html>

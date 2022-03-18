@@ -28,7 +28,7 @@ if (!empty($_POST['login'])) {
 	header("Location: " . $_SERVER["SCRIPT_NAME"]);
 	exit();
 } elseif (array_key_exists('add', $_GET)) {
-	header("Location: " . $_SERVER["SCRIPT_NAME"] . "?action=add&month=" . $_GET[month] . "&year=" . $_GET[year]);
+	header("Location: " . $_SERVER["SCRIPT_NAME"] . "?action=add&month=" . $_GET['month'] . "&year=" . $_GET['year']);
 	exit();
 } elseif (array_key_exists('exit', $_POST)) {
 	session_destroy();

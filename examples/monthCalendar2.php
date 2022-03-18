@@ -19,7 +19,7 @@ function buildMonthCal($month, $year, $outmonth = FALSE)
 	list($start_wd, $month_name, $gm1, $gy1) = explode('-', $d->format("w-_M-M-Y"));
 	$title = $month_name . " " . $year . "هـ (" . $gm1 . (($gy2 != $gy1) ? " " . $gy1 : '') . (($gm2 != $gm1) ? "-" . $gm2 : '') . " " . $gy2 . "م)";
 	
-	$wd = array(0 => 1, 2, 3, 4, 5, 6, 0);
+	$wd = array(0 => 0, 1, 2, 3, 4, 5, 6);
 	$month_length = $c->days_in_month($month, $year);
 	$b_month = $month - 1;
 	$b_year = $year;
@@ -33,21 +33,21 @@ function buildMonthCal($month, $year, $outmonth = FALSE)
 		$a_month = 1;
 		$a_year++;
 	}
-	echo '<div class="navigation"><a class="prev" href="monthCalendar.php?month=' . $b_month . '&year=' . $b_year . '">&lt;</a>' . '<div class="title" >' . $title . '<a class= "next" href="monthCalendar.php?month=' . $a_month . '&year=' . $a_year . '">&gt;</a>' . '</div>
+	echo '<div class="navigation"><a class="prev" href="'.basename($_SERVER['PHP_SELF']).'?month=' . $b_month . '&year=' . $b_year . '">&lt;</a>' . '<div class="title" >' . $title . '<a class= "next" href="monthCalendar.php?month=' . $a_month . '&year=' . $a_year . '">&gt;</a>' . '</div>
 </div>';
 	if ($wd[$start_wd] > 0) {
 		$d->modify("-" . $wd[$start_wd] . " day");
 	}
 	echo '<table>
     <tr>
-        <th class="weekday">السبت</th>
         <th class="weekday">الأحد</th>
         <th class="weekday">الإثنين</th>
         <th class="weekday">الثلاثاء</th>
         <th class="weekday">الأربعاء</th>
         <th class="weekday">الخميس</th>
         <th class="weekday">الجمعة</th>
-    </tr>';
+        <th class="weekday">السبت</th>
+	</tr>';
 	$dayw = 0;
 	do {
 		list($hd, $hm, $hy, $gd, $gm, $gy) = explode('-', $d->format("_j-_n-_Y-j-n-Y"));

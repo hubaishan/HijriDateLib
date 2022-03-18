@@ -2,7 +2,7 @@
 
 /**
  * Hijri Date lib
- * version 2.3.0
+ * version 2.3.1
  *
  * @desc   This Lib contains two PHP classes developed to support PHP developer 
  * 			with Hijri (Islamic) Calendar, with this lib you can show 
@@ -13,11 +13,12 @@
  * @copyright	2015-2016 Saeed Hubaishan 
  * @license		GPL-2.0, LGPL <http://www.gnu.org/licenses/lgpl.txt>
  * @author		Saeed Hubaishan
- * @version		2.3.0
+ * @version		2.3.1
  * @category	datetime, calendar 
  * @link		http://salafitech.net
  *
  */
+
 namespace hijri;
 
 /**
@@ -140,10 +141,10 @@ class datetime extends \DateTime
 	 *        	Optional the Calendar object
 	 * @return self datetime object from the given hijri date
 	 */
-	public static Function createFromHijri($year, $month, $day, \DateTimeZone $timezone = null, $langcode = null, $hijriCalendar = null)
+	public static function createFromHijri($year, $month, $day, \DateTimeZone $timezone = null, $langcode = null, $hijriCalendar = null)
 	{
 		if (isset($hijriCalendar) && ($hijriCalendar instanceof Calendar)) {
-			$this->hcal = $hijriCalendar;
+			static::$s_hcal = $hijriCalendar;
 		} elseif (!empty(static::$s_hcal)) {
 			$hijriCalendar = static::$s_hcal;
 		} else {
@@ -219,18 +220,16 @@ class datetime extends \DateTime
 		for ($i = 0, $count_c = count($c); $i < $count_c; $i++) {
 			
 			if ($c[$i] == '\\') {
-				if ($i < ($count_c - 1)) {
-					$i++;
-					$str .= '\\' . $c[$i];
+				if ($i < ($count_c-1)) {
+					$str .= '\\' . $c[++$i];
 				}
 			} elseif ($c[$i] == '_') {
 				$i++;
-				if ($count_c < $i)
+				if (($count_c-1) < $i)
 					break;
-				
-				switch ($c[$i])
-				{
-					case 'j' :
+
+				switch ($c[$i]) {
+					case 'j':
 						$str .= $hd;
 						if (($i + 1) < $count_c && $c[$i + 1] == 'S') {
 							if ($this->langcode == 'en') {
@@ -238,10 +237,10 @@ class datetime extends \DateTime
 							}
 							$i++;
 						}
-						
-					break;
-					
-					case 'd' :
+
+						break;
+
+					case 'd':
 						$str .= str_pad($hd, 2, '0', STR_PAD_LEFT);
 						if (($i + 1) < $count_c && $c[$i + 1] == 'S') {
 							if ($this->langcode == 'en') {
@@ -249,96 +248,95 @@ class datetime extends \DateTime
 							}
 							$i++;
 						}
-					break;
-					
-					case 'z' :
+						break;
+
+					case 'z':
 						$str .= $z - 1;
-					break;
-					
-					case 'F' :
+						break;
+
+					case 'F':
 						$str .= addcslashes($this->hcal->month_name($hm, $this->langcode), 'A..z');
-					break;
-					
-					case 'M' :
+						break;
+
+					case 'M':
 						if (in_array($this->langcode, array('en', 'fr', 'de', 'es', 'pt', 'it', 'en'))) {
 							$str .= addcslashes($hsmonths[$hm], 'A..z');
 						} else {
 							$str .= addcslashes($this->hcal->month_name($hm, $this->langcode), 'A..z');
 						}
-					break;
-					case 't' :
+						break;
+					case 't':
 						$str .= $this->hcal->days_in_month($hm, $hy);
-					break;
-					
-					case 'm' :
-						$str .= str_pad($hm, 2, '0', STR_PAD_LEFT);
-					break;
-					
-					case 'n' :
-						$str .= $hm;
-					break;
-					
-					case 'y' :
-						$str .= substr($hy, 2);
-					break;
-					
-					case 'Y' :
-						$str .= $hy;
-					break;
-					
-					case 'L' :
-						$str .= $this->hcal->leap_year($hy);
-					break;
+						break;
 
-					case 'S' :
+					case 'm':
+						$str .= str_pad($hm, 2, '0', STR_PAD_LEFT);
+						break;
+
+					case 'n':
+						$str .= $hm;
+						break;
+
+					case 'y':
+						$str .= substr($hy, 2);
+						break;
+
+					case 'Y':
+						$str .= $hy;
+						break;
+
+					case 'L':
+						$str .= $this->hcal->leap_year($hy);
+						break;
+
+					case 'S':
 						if ($this->langcode == 'en') {
 							$str .= addcslashes(Calendar::english_suffix($hd), 'A..z');
 						}
-					break;
-					
-					case 'W' :
-					case 'o' :
-					break;
-					
-					default :
+						break;
+
+					case 'W':
+					case 'o':
+						break;
+
+					default:
 						$str .= $c[$i];
 				}
 			} elseif ($this->langcode == 'ar') {
-				switch ($c[$i])
-				{
-					case 'l' :
-					case 'D' :
+				switch ($c[$i]) {
+					case 'l':
+					case 'D':
 						$str .= $days[$w];
-					break;
-					
-					case 'F' :
+						break;
+
+					case 'F':
 						$str .= $smonths[$mn];
-					break;
-					
-					case 'M' :
+						break;
+
+					case 'M':
 						$str .= $gmonths[$mn];
-					break;
-					
-					case 'a' :
+						break;
+
+					case 'a':
 						$str .= ($am == 'am') ? ('ص') : ('م');
-					break;
-					
-					case 'A' :
+						break;
+
+					case 'A':
 						$str .= ($am == 'am') ? ('صباحًا') : ('مساءً');
-					break;
-					
-					case 'S' : // not used in Arabic
-					break;
-					
-					default :
+						break;
+
+					case 'S': // not used in Arabic
+						break;
+
+					default:
 						$str .= $c[$i];
-					break;
+						break;
 				}
 			} else {
 				$str .= $c[$i];
 			}
 		}
-		
+
 		return parent::format($str);
 	}
 
@@ -537,7 +535,8 @@ class Calendar
 		if (!empty(self::$s_umdata) && (($with_adj && ($this->adj_data == self::$s_adjdata)) || (!$with_adj && (self::$s_adjdata == array())))) {
 			$myumdata = self::$s_umdata;
 		} else {
-			$myumdata = array(15140, 15169, 15199, 15228, 15258, 15287, 15317, 15347, 15377, 15406, 15436, 15465, 15494, 15524, 15553, 15582, 15612, 15641, 15671, 15701, 15731, 15760, 15790, 15820, 15849, 15878, 15908, 15937, 15966, 15996, 16025, 16055, 16085, 16114, 16144, 16174, 16204, 16233, 
+			$myumdata = array(
+				15140, 15169, 15199, 15228, 15258, 15287, 15317, 15347, 15377, 15406, 15436, 15465, 15494, 15524, 15553, 15582, 15612, 15641, 15671, 15701, 15731, 15760, 15790, 15820, 15849, 15878, 15908, 15937, 15966, 15996, 16025, 16055, 16085, 16114, 16144, 16174, 16204, 16233, 
 				16262, 16292, 16321, 16350, 16380, 16409, 16439, 16468, 16498, 16528, 16558, 16587, 16617, 16646, 16676, 16705, 16734, 16764, 16793, 16823, 16852, 16882, 16912, 16941, 16971, 17001, 17030, 17060, 17089, 17118, 17148, 17177, 17207, 17236, 17266, 17295, 17325, 17355, 17384, 17414, 
 				17444, 17473, 17502, 17532, 17561, 17591, 17620, 17650, 17679, 17709, 17738, 17768, 17798, 17827, 17857, 17886, 17916, 17945, 17975, 18004, 18034, 18063, 18093, 18122, 18152, 18181, 18211, 18241, 18270, 18300, 18330, 18359, 18388, 18418, 18447, 18476, 18506, 18535, 18565, 18595, 
 				18625, 18654, 18684, 18714, 18743, 18772, 18802, 18831, 18860, 18890, 18919, 18949, 18979, 19008, 19038, 19068, 19098, 19127, 19156, 19186, 19215, 19244, 19274, 19303, 19333, 19362, 19392, 19422, 19452, 19481, 19511, 19540, 19570, 19599, 19628, 19658, 19687, 19717, 19746, 19776, 
@@ -591,7 +590,8 @@ class Calendar
 				75323, 75353, 75383, 75412, 75442, 75472, 75501, 75531, 75560, 75590, 75619, 75648, 75678, 75707, 75737, 75766, 75796, 75826, 75856, 75885, 75915, 75944, 75974, 76003, 76032, 76062, 76091, 76121, 76150, 76180, 76210, 76239, 76269, 76299, 76328, 76358, 76387, 76416, 76446, 76475, 
 				76505, 76534, 76564, 76593, 76623, 76653, 76682, 76712, 76741, 76771, 76801, 76830, 76859, 76889, 76918, 76948, 76977, 77007, 77036, 77066, 77096, 77125, 77155, 77185, 77214, 77243, 77273, 77302, 77332, 77361, 77390, 77420, 77450, 77479, 77509, 77539, 77569, 77598, 77627, 77657, 
 				77686, 77715, 77745, 77774, 77804, 77833, 77863, 77893, 77923, 77952, 77982, 78011, 78041, 78070, 78099, 78129, 78158, 78188, 78217, 78247, 78277, 78307, 78336, 78366, 78395, 78425, 78454, 78483, 78513, 78542, 78572, 78601, 78631, 78661, 78690, 78720, 78750, 78779, 78808, 78838, 
-				78867, 78897, 78926, 78956, 78985, 79015, 79044, 79074, 79104, 79133, 79163, 79192, 79222, 79251, 79281, 79310, 79340, 79369, 79399, 79428, 79458, 79487, 79517, 79546, 79576, 79606, 79635, 79665, 79695, 79724, 79753, 79783, 79812, 79841, 79871, 79900, 79930, 79960);
+				78867, 78897, 78926, 78956, 78985, 79015, 79044, 79074, 79104, 79133, 79163, 79192, 79222, 79251, 79281, 79310, 79340, 79369, 79399, 79428, 79458, 79487, 79517, 79546, 79576, 79606, 79635, 79665, 79695, 79724, 79753, 79783, 79812, 79841, 79871, 79900, 79930, 79960
+			);
 			if ($with_adj) {
 				$myumdata = array_replace($myumdata, $this->adj_data);
 				if (!$return_array) {
@@ -864,7 +864,7 @@ class Calendar
 			}
 			$t = $this->umdata[$i + 1] - $this->umdata[$i];
 		} else {
-			If ($month == 12) {
+			if ($month == 12) {
 				if ($year < 0) {
 					$year = $year + 5521;
 				}
@@ -883,74 +883,73 @@ class Calendar
 	/**
 	 * Returns array of the hijri month names in 20 languages
 	 *
-	 * @param type $langcode
+	 * @param string $langcode
 	 *        	the language code
 	 * @return array Array of Hijri month names, keys are month number (start from 1), values are string of month name
 	 */
 	public function monthnames($langcode = 'ar')
 	{
-		switch ($langcode)
-		{
-			case 'ar' :
+		switch ($langcode) {
+			case 'ar':
 				$months = array(1 => 'محرم', 'صفر', 'ربيع الأول', 'ربيع الثاني', 'جمادى الأولى', 'جمادى الآخرة', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذو القعدة', 'ذو الحجة');
-			break;
-			case 'fa' :
+				break;
+			case 'fa':
 				$months = array(1 => 'محرم', 'صفر ', 'ربیع‌الاول', 'ربیع‌الثانی', 'جمادی‌الاول', 'جمادی‌الثانی', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذیقعده', 'ذیحجه');
-			break;
-			case 'ur' :
+				break;
+			case 'ur':
 				$months = array(1 => 'محرم', 'صفر', 'ربیع الاول', 'ربیع الثانی', 'جمادی الاول', 'جمادی الثانی', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذوالقعدہ', 'ذوالحجہ');
-			break;
-			case 'sq' :
+				break;
+			case 'sq':
 				$months = array(1 => 'Muharrem', 'Sefer', 'Rebi el-Evvel', 'Rebi uth-Thani', 'Xhumade Ula', 'Xhumade el-Ahir', 'Rexheb', 'Sha’ban', 'Ramazani', 'Sheval', 'Dhulkade', 'Dhulhixhxhe');
-			break;
-			case 'az' :
+				break;
+			case 'az':
 				$months = array(1 => 'Məhərrəmc', 'Səfər', 'Rəbiüləvvəl', 'Rəbiülaxır', 'Cəmadiyələvvəl', 'Cəmadiyəlaxır', 'Rəcəb', 'Şaban', 'Ramazan', 'Şəvval', 'Zilqədə', 'Zilhiccə');
-			break;
-			case 'bn' :
+				break;
+			case 'bn':
 				$months = array(1 => 'মহররম', 'সফর', 'রবিউল আউয়াল', 'রবিউস সানি', 'জমাদিউল আউয়াল', 'জমাদিউস সানি', 'রজব', 'শা‘বান', 'রমজান', 'শাওয়াল', 'জ্বিলকদ', 'জ্বিলহজ্জ');
-			break;
-			case 'bs' :
+				break;
+			case 'bs':
 				$months = array(1 => 'Muharrem', 'Safer', 'Rebiul-evvel', 'Rebiul-ahir', 'Džumade-l-ula', 'Džumade-l-ahira', 'Redžeb', 'Ša\'ban', 'Ramazan', 'Ševval', 'Zu-l-ka\'de', 'Zu-l-hidždže');
-			break;
-			case 'zh' :
+				break;
+			case 'zh':
 				$months = array(1 => '穆哈兰姆月', '色法尔月', '赖比尔·敖外鲁月', '赖比尔·阿色尼月', '主马达·敖外鲁月', '主马达·阿色尼月', '赖哲卜月', '舍尔邦月', '赖买丹月', '闪瓦鲁月', '都尔喀尔德月', '都尔黑哲月');
-			break;
-			case 'fr' :
+				break;
+			case 'fr':
 				$months = array(1 => 'Mouharram', 'Safar', 'Rabia al awal', 'Rabia ath-thani', 'Joumada al oula', 'Joumada ath-thania', 'Rajab', 'Chaabane', 'Ramadan', 'Chawwal', 'Dhou al qi`da', 'Dhou al-hijja');
-			break;
-			case 'de' :
+				break;
+			case 'de':
 				$months = array(1 => 'Muharram', 'Safar', 'Rabiʿ al-auwal', 'Rabiʿ ath-thani', 'Dschumada l-ula', 'Dschumada th-thaniyya', 'Radschab', 'Schaʿban', 'Ramadan', 'Schawwal', 'Dhu l-qaʿda', 'Dhu l-hiddscha');
-			break;
-			case 'hi' :
+				break;
+			case 'hi':
 				$months = array(1 => 'मुहर्रम', 'सफ़र', 'रबीउल अव्वल', 'रबीउल आख़िर', 'जमादी-उल-अव्वल', 'जमादी-उल-आख़िर', 'रजब', 'शाबान', 'रमज़ान', 'शव्वाल', 'ज़िलक़ाद', 'ज़िलहिज्ज');
-			break;
-			case 'id' :
+				break;
+			case 'id':
 				$months = array(1 => 'Muharram', 'Safar', 'Rabiul awal', 'Rabiul akhir', 'Jumadil awal', 'Jumadil akhir', 'Rajab', 'Sya\'ban', 'Ramadhan', 'Syawal', 'Dzulkaidah', 'Dzulhijjah');
-			break;
-			case 'ckb' :
+				break;
+			case 'ckb':
 				$months = array(1 => 'موحەڕڕەم', 'سەفەر', 'ڕەبیعەلئەووەل', 'ڕەبیعەلئاخیر', 'جومادەلئوولا', 'جەمادەلئاخیر', 'ڕەجەب', 'شەعبان', 'ڕەمەزان', 'شەووال', 'زولقەعدە', 'زولحەججە');
-			break;
-			case 'ms' :
+				break;
+			case 'ms':
 				$months = array(1 => 'Muharam', 'Safar', 'Rabiulawal', 'Rabiulakhir', 'Jamadilawal', 'Jamadilakhir', 'Rejab', 'Syaaban', 'Ramadan', 'Syawal', 'Zulkaedah', 'Zulhijah');
-			break;
-			case 'ru' :
+				break;
+			case 'ru':
 				$months = array(1 => 'Мухаррам', 'Сафар', 'Раби-уль-авваль', 'Раби-уль-ахир', 'Джумад-уль-авваль', 'Джумад-уль-ахир', 'Раджаб', 'Шаабан', 'Рамадан', 'Шавваль', 'Зуль-Каада', 'Зуль-Хиджжа');
-			break;
-			case 'es' :
+				break;
+			case 'es':
 				$months = array(1 => 'Muharram', 'Safar', 'Rabi\' al-Awwal', 'Rabi\' al-Thani', 'Yumada al-Wula', 'Yumada al-Thania', 'Rayab', 'Sha\'abán', 'Ramadán', 'Shawwal', 'Du al-Qa\'da', 'Du al-Hiyya');
-			break;
-			case 'tr' :
+				break;
+			case 'tr':
 				$months = array(1 => 'Muharrem', 'Safer', 'Rebiülevvel', 'Rebiülahir', 'Cemaziyelevvel', 'Cemaziyelahir', 'Recep', 'Şaban', 'Ramazan', 'Şevval', 'Zilkade', 'Zilhicce');
-			break;
-			case 'pt' :
+				break;
+			case 'pt':
 				$months = array(1 => 'Muharram', 'Safar', 'Rabi al-Awwal', 'Raby al-THaany', 'Jumaada al-Awal', 'Jumaada al-THaany', 'Rajab', 'Sha\'aban', 'Ramadan', 'Shawwal', 'Dhu al-Qidah', 'Dhu al-Hija');
-			break;
-			case 'it' :
+				break;
+			case 'it':
 				$months = array(1 => 'Muhàrram', 'Sàfar', 'Rabì‘ al-àwwal', 'Rabì‘ ath-thàni', 'Jumàda al-àwwal', 'Jumàda al-akhìra', 'Ràjab', 'Sha‘bàn', 'Ramadàn', 'Shawwàl', 'Dhu l-qà‘da', 'Dhu l-hìjja');
-			break;
-			default :
+				break;
+			default:
 				$months = array(1 => 'Muharram', 'Safar', 'Rabi Al Awwal', 'Rabi Al Thani', 'Jumada Al Oula', 'Jumada Al Akhira', 'Rajab', 'Shaban', 'Ramadan', 'Shawwal', 'Dhul Qidah', 'Dhul Hijjah');
-			break;
+				break;
 		}
 		return $months;
 	}
@@ -961,7 +960,7 @@ class Calendar
 	 * @since 2.2.0 $short param added
 	 * @param string $month
 	 *        	the month number
-	 * @param integer $langcode
+	 * @param string $langcode
 	 *        	the language ISO code
 	 * @param bool $short
 	 *        	return short names of months for European languages

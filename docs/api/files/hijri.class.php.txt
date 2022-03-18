@@ -883,7 +883,7 @@ class Calendar
 	/**
 	 * Returns array of the hijri month names in 20 languages
 	 *
-	 * @param type $langcode
+	 * @param string $langcode
 	 *        	the language code
 	 * @return array Array of Hijri month names, keys are month number (start from 1), values are string of month name
 	 */
@@ -961,7 +961,7 @@ class Calendar
 	 * @since 2.2.0 $short param added
 	 * @param string $month
 	 *        	the month number
-	 * @param integer $langcode
+	 * @param string $langcode
 	 *        	the language ISO code
 	 * @param bool $short
 	 *        	return short names of months for European languages
