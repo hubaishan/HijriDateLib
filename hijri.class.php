@@ -144,7 +144,7 @@ class datetime extends \DateTime
 	public static function createFromHijri($year, $month, $day, \DateTimeZone $timezone = null, $langcode = null, $hijriCalendar = null)
 	{
 		if (isset($hijriCalendar) && ($hijriCalendar instanceof Calendar)) {
-			static::$s_hcal = $hijriCalendar;
+			static::$hcal = $hijriCalendar;
 		} elseif (!empty(static::$s_hcal)) {
 			$hijriCalendar = static::$s_hcal;
 		} else {
