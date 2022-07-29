@@ -2,7 +2,7 @@
 
 /**
  * Hijri Date lib
- * version 2.3.1
+ * version 2.3.2
  *
  * @desc   This Lib contains two PHP classes developed to support PHP developer 
  * 			with Hijri (Islamic) Calendar, with this lib you can show 
@@ -13,7 +13,7 @@
  * @copyright	2015-2016 Saeed Hubaishan 
  * @license		GPL-2.0, LGPL <http://www.gnu.org/licenses/lgpl.txt>
  * @author		Saeed Hubaishan
- * @version		2.3.1
+ * @version		2.3.2
  * @category	datetime, calendar 
  * @link		http://salafitech.net
  *
@@ -156,6 +156,7 @@ class datetime extends \DateTime
 		return $d;
 	}
 
+	#[\ReturnTypeWillChange]
 	/**
 	 * Formats the current date time into the specified format, this method overrides
 	 * Datetime original method, if format characters are
