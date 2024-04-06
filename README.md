@@ -18,5 +18,5 @@ the lib has two algorithms to calculte Hijri Date:
 8. The has full api documents.
 
 ## Requirments
-The HijriDatLib requires at php version 5.3 at least. It is compatible up to php 8.1 .
+The HijriDatLib requires at php version 5.3 at least. It is compatible up to php 8.3 .
 
