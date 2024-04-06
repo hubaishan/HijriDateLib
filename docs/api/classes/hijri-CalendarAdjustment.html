@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
             <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/template.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
                 <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
         <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+        <script src="js/template.js"></script>
         <script src="js/search.js"></script>
         <script defer src="js/searchIndex.js"></script>
     </head>
@@ -52,7 +53,7 @@
 <label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
     Menu
 </label>
-<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+<aside class="phpdocumentor-column -three phpdocumentor-sidebar">
                     <section class="phpdocumentor-sidebar__category">
             <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
@@ -81,8 +82,9 @@
     </section>
 </aside>
 
-            <div class="phpdocumentor-column -eight phpdocumentor-content">
-                    <ul class="phpdocumentor-breadcrumbs">
+            <div class="phpdocumentor-column -nine phpdocumentor-content">
+                                <section>
+                                        <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/hijri.html">hijri</a></li>
     </ul>
 
@@ -104,8 +106,13 @@
     
     </h2>
 
+<div class="phpdocumentor-label-line">
+
+
+</div>
+
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1099</span>
 
@@ -127,7 +134,8 @@ is an array with this sample structure:</p>
 
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-CalendarAdjustment.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -135,7 +143,7 @@ is an array with this sample structure:</p>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                                 
-                                                 <section class="phpdocumentor-description"><p>2015-2022 Saeed Hubaishan</p>
+                                                 <section class="phpdocumentor-description"><p>2015-2024 Saeed Hubaishan</p>
 </section>
 
                                     </dd>
@@ -178,7 +186,7 @@ is an array with this sample structure:</p>
                     <span class="phpdocumentor-tag__name">version</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                            <span class="phpdocumentor-tag-link">2.3.2</span>
+                                            <span class="phpdocumentor-tag-link">2.3.3</span>
                                                                                 
                                              
                                     </dd>
@@ -198,18 +206,27 @@ is an array with this sample structure:</p>
                                                                                                         <a class="phpdocumentor-tag-link" href="http://salafitech.net"> http://salafitech.net </a>
                     
                                     </dd>
-                        </dl>
-
-
-
+                                            </dl>
 
 
 
 <h3 id="toc">
     Table of Contents
-    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/hijri-CalendarAdjustment.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+
 </h3>
 
+
+
+
+
+
+
+<h4 id="toc-constants">
+    Constants
+    <a href="classes/hijri-CalendarAdjustment.html#toc-constants" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
     <a href="classes/hijri-Calendar.html#constant_mjd_factor">mjd_factor</a>
@@ -246,49 +263,60 @@ is an array with this sample structure:</p>
 </dt>
 <dd>the Um Al-Qura Calendar start year</dd>
 
-                    <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    </dl>
+
+
+<h4 id="toc-properties">
+    Properties
+    <a href="classes/hijri-CalendarAdjustment.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/hijri-Calendar.html#property_supported_languages">$supported_languages</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/hijri-Calendar.html#property_umalqura">$umalqura</a>
     <span>
                         &nbsp;: bool            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/hijri-Calendar.html#property_adj_data">$adj_data</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/hijri-Calendar.html#property_umdata">$umdata</a>
     <span>
                         &nbsp;: array&lt;string|int, int&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/hijri-CalendarAdjustment.html#property_umdata_clear">$umdata_clear</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/hijri-CalendarAdjustment.html#property_grdate_format">$grdate_format</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
 
-                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    </dl>
+
+<h4 id="toc-methods">
+    Methods
+    <a href="classes/hijri-CalendarAdjustment.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/hijri-CalendarAdjustment.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: <a href="classes/hijri-Calendar.html"><abbr title="\hijri\Calendar">Calendar</abbr></a>    </span>
@@ -463,7 +491,8 @@ is an array with this sample structure:</p>
 </dt>
 <dd>Loads Um Al-Qura data and apply the adjustments</dd>
 
-        </dl>
+    </dl>
+
 
 
 
@@ -472,15 +501,17 @@ is an array with this sample structure:</p>
         <h3 class="phpdocumentor-elements__header" id="constants">
             Constants
             <a href="classes/hijri-CalendarAdjustment.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_mjd_factor">
         mjd_factor
         <a href="classes/hijri-Calendar.html#constant_mjd_factor" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">478</span>
 
@@ -497,8 +528,7 @@ is an array with this sample structure:</p>
 
 
     
-        <section class="phpdocumentor-description"></section>
-
+    
     
 
 </article>
@@ -506,10 +536,11 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="constant_umendjd">
         umendjd
         <a href="classes/hijri-Calendar.html#constant_umendjd" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">473</span>
 
@@ -526,8 +557,7 @@ is an array with this sample structure:</p>
 
 
     
-        <section class="phpdocumentor-description"></section>
-
+    
     
 
 </article>
@@ -535,10 +565,11 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="constant_umendyear">
         umendyear
         <a href="classes/hijri-Calendar.html#constant_umendyear" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">465</span>
 
@@ -555,8 +586,7 @@ is an array with this sample structure:</p>
 
 
     
-        <section class="phpdocumentor-description"></section>
-
+    
     
 
 </article>
@@ -564,10 +594,11 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="constant_umstartjd">
         umstartjd
         <a href="classes/hijri-Calendar.html#constant_umstartjd" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">469</span>
 
@@ -584,8 +615,7 @@ is an array with this sample structure:</p>
 
 
     
-        <section class="phpdocumentor-description"></section>
-
+    
     
 
 </article>
@@ -593,10 +623,11 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="constant_umstartyear">
         umstartyear
         <a href="classes/hijri-Calendar.html#constant_umstartyear" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">461</span>
 
@@ -613,8 +644,7 @@ is an array with this sample structure:</p>
 
 
     
-        <section class="phpdocumentor-description"></section>
-
+    
     
 
 </article>
@@ -625,6 +655,7 @@ is an array with this sample structure:</p>
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
             <a href="classes/hijri-CalendarAdjustment.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="
@@ -636,11 +667,12 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="property_supported_languages">
         $supported_languages
         <a href="classes/hijri-Calendar.html#property_supported_languages" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">486</span>
 
@@ -660,7 +692,8 @@ is an array with this sample structure:</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-Calendar.html#property_supported_languages#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -670,7 +703,7 @@ is an array with this sample structure:</p>
                                                                                 
                                              
                                     </dd>
-                        </dl>
+                                            </dl>
 
 </article>
                     <article
@@ -683,11 +716,12 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="property_umalqura">
         $umalqura
         <a href="classes/hijri-Calendar.html#property_umalqura" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">450</span>
 
@@ -717,11 +751,12 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="property_adj_data">
         $adj_data
         <a href="classes/hijri-Calendar.html#property_adj_data" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">456</span>
 
@@ -751,11 +786,12 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="property_umdata">
         $umdata
         <a href="classes/hijri-Calendar.html#property_umdata" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">444</span>
 
@@ -785,11 +821,12 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="property_umdata_clear">
         $umdata_clear
         <a href="classes/hijri-CalendarAdjustment.html#property_umdata_clear" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1106</span>
 
@@ -819,11 +856,12 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="property_grdate_format">
         $grdate_format
         <a href="classes/hijri-CalendarAdjustment.html#property_grdate_format" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1111</span>
 
@@ -849,6 +887,7 @@ is an array with this sample structure:</p>
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
             <a href="classes/hijri-CalendarAdjustment.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="phpdocumentor-element
@@ -859,9 +898,10 @@ is an array with this sample structure:</p>
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
         <a href="classes/hijri-CalendarAdjustment.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1128</span>
 
@@ -873,6 +913,8 @@ is an array with this sample structure:</p>
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$settings</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/hijri-Calendar.html"><abbr title="\hijri\Calendar">Calendar</abbr></a></span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -896,7 +938,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-CalendarAdjustment.html#method___construct#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -908,15 +951,17 @@ if not set, the defaults from $hijri_settings global variable will be used.
 </section>
 
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/hijri-Calendar.html"><abbr title="\hijri\Calendar">Calendar</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>hijri\CalendarAdjustment object with the specified settings.</p>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/hijri-Calendar.html"><abbr title="\hijri\Calendar">Calendar</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>hijri\CalendarAdjustment object with the specified settings.</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -927,9 +972,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_add_adj">
         add_adj()
         <a href="classes/hijri-CalendarAdjustment.html#method_add_adj" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1324</span>
 
@@ -941,6 +987,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">add_adj</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$new_month_start</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -976,7 +1024,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-CalendarAdjustment.html#method_add_adj#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -987,16 +1036,18 @@ if not set, the defaults from $hijri_settings global variable will be used.
                                                                                 
                                              
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>TRUE if the succeeded or FALSE if not</p>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>TRUE if the succeeded or FALSE if not</p>
 <p>this will add the adjustment only to the current object if you want to save it you must use get_adj_txt()</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1007,9 +1058,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_auto_del_info">
         auto_del_info()
         <a href="classes/hijri-CalendarAdjustment.html#method_auto_del_info" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1382</span>
 
@@ -1021,6 +1073,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">auto_del_info</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1047,7 +1101,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-CalendarAdjustment.html#method_auto_del_info#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1058,15 +1113,17 @@ if not set, the defaults from $hijri_settings global variable will be used.
                                                                                 
                                              
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>array of must to delete month adjustments, keys are 'month','year'</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>array of must to delete month adjustments, keys are 'month','year'</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1077,9 +1134,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_check_auto_adj">
         check_auto_adj()
         <a href="classes/hijri-CalendarAdjustment.html#method_check_auto_adj" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1228</span>
 
@@ -1091,6 +1149,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">check_auto_adj</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$off</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1117,7 +1177,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-CalendarAdjustment.html#method_check_auto_adj#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1128,15 +1189,17 @@ if not set, the defaults from $hijri_settings global variable will be used.
                                                                                 
                                              
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Array of adj_data must by applied if the start of month adjusted to the given day</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Array of adj_data must by applied if the start of month adjusted to the given day</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1147,9 +1210,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_check_auto_del">
         check_auto_del()
         <a href="classes/hijri-CalendarAdjustment.html#method_check_auto_del" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1189</span>
 
@@ -1161,6 +1225,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">check_auto_del</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$off</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, int&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1178,7 +1244,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-CalendarAdjustment.html#method_check_auto_del#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1189,15 +1256,17 @@ if not set, the defaults from $hijri_settings global variable will be used.
                                                                                 
                                              
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, int&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Array of index of month adjustment must be deleted</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, int&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Array of index of month adjustment must be deleted</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1208,9 +1277,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_checkHijriDate">
         checkHijriDate()
         <a href="classes/hijri-Calendar.html#method_checkHijriDate" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1030</span>
 
@@ -1222,6 +1292,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">checkHijriDate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$day</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1256,13 +1328,15 @@ if not set, the defaults from $hijri_settings global variable will be used.
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>TRUE if the given date is correct, FALSE else</p>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>TRUE if the given date is correct, FALSE else</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1273,9 +1347,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_days_in_month">
         days_in_month()
         <a href="classes/hijri-Calendar.html#method_days_in_month" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">856</span>
 
@@ -1287,6 +1362,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">days_in_month</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$umalqura</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1321,13 +1398,15 @@ if not set, the defaults from $hijri_settings global variable will be used.
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>count of days in month 29 or 30</p>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>count of days in month 29 or 30</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1338,9 +1417,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_del_adj">
         del_adj()
         <a href="classes/hijri-CalendarAdjustment.html#method_del_adj" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1361</span>
 
@@ -1352,6 +1432,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">del_adj</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1378,7 +1460,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-CalendarAdjustment.html#method_del_adj#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1389,12 +1472,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
                                                                                 
                                              
                                     </dd>
-                        </dl>
+                                            </dl>
 
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
     
 </article>
                     <article
@@ -1406,9 +1485,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_english_suffix">
         english_suffix()
         <a href="classes/hijri-Calendar.html#method_english_suffix" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1048</span>
 
@@ -1420,6 +1500,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
             <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">english_suffix</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$number</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1435,7 +1517,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-Calendar.html#method_english_suffix#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1446,13 +1529,13 @@ if not set, the defaults from $hijri_settings global variable will be used.
                                                                                 
                                              
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-        
-    
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1463,9 +1546,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_get_adjdata">
         get_adjdata()
         <a href="classes/hijri-CalendarAdjustment.html#method_get_adjdata" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1170</span>
 
@@ -1477,6 +1561,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">get_adjdata</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$txt</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">TRUE</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1494,7 +1580,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-CalendarAdjustment.html#method_get_adjdata#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1515,15 +1602,17 @@ if not set, the defaults from $hijri_settings global variable will be used.
                                                                                 
                                              
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>string json encoded array adjustment data if $txt is true, or array of adjustment data if $txt if false</p>
+        <span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>string json encoded array adjustment data if $txt is true, or array of adjustment data if $txt if false</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1534,9 +1623,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_get_current_adjs">
         get_current_adjs()
         <a href="classes/hijri-CalendarAdjustment.html#method_get_current_adjs" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1300</span>
 
@@ -1548,12 +1638,15 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">get_current_adjs</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-CalendarAdjustment.html#method_get_current_adjs#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1564,12 +1657,13 @@ if not set, the defaults from $hijri_settings global variable will be used.
                                                                                 
                                              
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>An array contains (arrays) of current adjustments with these keys:</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>An array contains (arrays) of current adjustments with these keys:</p>
 <div style='margin-left:20px'>
 <dt>month: int</dt> <dd>The hijri month</dd>
 <dt>year: int</dt> <dd> The hijri year of the month</dd>
@@ -1577,7 +1671,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
 <dt>default: string</dt> <dd>The original start the Hijri month in Gregorian, the format will be same of grdate_format option or (d/m/yyyy)</dd> </div>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1588,9 +1683,10 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <h4 class="phpdocumentor-element__name" id="method_get_possible_starts">
         get_possible_starts()
         <a href="classes/hijri-CalendarAdjustment.html#method_get_possible_starts" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">1271</span>
 
@@ -1602,6 +1698,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">get_possible_starts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1628,7 +1726,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-CalendarAdjustment.html#method_get_possible_starts#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1639,12 +1738,13 @@ if not set, the defaults from $hijri_settings global variable will be used.
                                                                                 
                                              
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>An array contains two numeric indexed variables (arrays) with these keys:</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>An array contains two numeric indexed variables (arrays) with these keys:</p>
 <div style='margin-left:20px'>
 <dt>grdate: string</dt> <dd>gregorion date (format d/m/yyyy) of the possible start of the hijri month</dd>
 <dt>jd: int</dt> <dd>modifed julian day of the possible start of the hijri month</dd>
@@ -1657,7 +1757,8 @@ if not set, the defaults from $hijri_settings global variable will be used.
 if the given month is out of umalqura range the function will return empty array
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1668,9 +1769,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_GregorianToHijri">
         GregorianToHijri()
         <a href="classes/hijri-Calendar.html#method_GregorianToHijri" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">699</span>
 
@@ -1682,6 +1784,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">GregorianToHijri</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$day</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1716,13 +1820,15 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>An array contains Hijri Date: 'y' key for year,'m' key for month,'d' key for day</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>An array contains Hijri Date: 'y' key for year,'m' key for month,'d' key for day</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1733,9 +1839,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_HijriToGregorian">
         HijriToGregorian()
         <a href="classes/hijri-Calendar.html#method_HijriToGregorian" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">717</span>
 
@@ -1747,6 +1854,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">HijriToGregorian</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$day</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1781,13 +1890,15 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>An array contains Gregorian Date: 'y' key for year,'m' key for month,'d' key for day</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>An array contains Gregorian Date: 'y' key for year,'m' key for month,'d' key for day</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1798,9 +1909,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_HijriToJD">
         HijriToJD()
         <a href="classes/hijri-Calendar.html#method_HijriToJD" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">818</span>
 
@@ -1812,6 +1924,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">HijriToJD</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$day</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1846,13 +1960,15 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>julianday</p>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>julianday</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1863,9 +1979,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_HijriToJulian">
         HijriToJulian()
         <a href="classes/hijri-Calendar.html#method_HijriToJulian" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">753</span>
 
@@ -1877,6 +1994,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">HijriToJulian</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$day</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1911,13 +2030,15 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>An array contains Julian Date: 'y' key for year,'m' key for month,'d' key for day</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>An array contains Julian Date: 'y' key for year,'m' key for month,'d' key for day</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1928,9 +2049,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_HijriToWestern">
         HijriToWestern()
         <a href="classes/hijri-Calendar.html#method_HijriToWestern" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">796</span>
 
@@ -1942,6 +2064,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">HijriToWestern</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$day</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
         <section class="phpdocumentor-description"><p>The Western date is Julian date before 1582 and Gregorian after</p>
 </section>
 
@@ -1978,13 +2102,15 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>An array contains Western Date: 'y' key for year,'m' key for month,'d' key for day</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>An array contains Western Date: 'y' key for year,'m' key for month,'d' key for day</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1995,9 +2121,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_jd2hijri">
         jd2hijri()
         <a href="classes/hijri-Calendar.html#method_jd2hijri" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">627</span>
 
@@ -2009,6 +2136,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">jd2hijri</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$julianday</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$hy</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$hm</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$hd</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$hz</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2061,10 +2190,6 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
     
 </article>
                     <article
@@ -2076,9 +2201,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_JDToHijri">
         JDToHijri()
         <a href="classes/hijri-Calendar.html#method_JDToHijri" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">682</span>
 
@@ -2090,6 +2216,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">JDToHijri</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$julianday</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2106,13 +2234,15 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Hijri date in format month/day/year</p>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Hijri date in format month/day/year</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -2123,9 +2253,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_JulianToHijri">
         JulianToHijri()
         <a href="classes/hijri-Calendar.html#method_JulianToHijri" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">735</span>
 
@@ -2137,6 +2268,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">JulianToHijri</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$day</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2171,13 +2304,15 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>An array contains Hijri Date: 'y' key for year,'m' key for month,'d' key for day</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>An array contains Hijri Date: 'y' key for year,'m' key for month,'d' key for day</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -2188,9 +2323,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_leap_year">
         leap_year()
         <a href="classes/hijri-Calendar.html#method_leap_year" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">990</span>
 
@@ -2202,6 +2338,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">leap_year</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$umalqura</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2227,13 +2365,15 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>1 if the given year is leap(have 355 days), 0 else</p>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>1 if the given year is leap(have 355 days), 0 else</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -2244,9 +2384,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_month_name">
         month_name()
         <a href="classes/hijri-Calendar.html#method_month_name" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">970</span>
 
@@ -2258,6 +2399,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">month_name</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$langcode</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;ar&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$short</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">FALSE</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2293,7 +2436,8 @@ if the given month is out of umalqura range the function will return empty array
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/hijri-Calendar.html#method_month_name#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -2306,15 +2450,17 @@ if the given month is out of umalqura range the function will return empty array
 </section>
 
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Hijri month name</p>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Hijri month name</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -2325,9 +2471,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_monthnames">
         monthnames()
         <a href="classes/hijri-Calendar.html#method_monthnames" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">891</span>
 
@@ -2339,6 +2486,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">monthnames</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$langcode</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;ar&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2355,13 +2504,15 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Array of Hijri month names, keys are month number (start from 1), values are string of month name</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Array of Hijri month names, keys are month number (start from 1), values are string of month name</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -2372,9 +2523,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_WesternToHijri">
         WesternToHijri()
         <a href="classes/hijri-Calendar.html#method_WesternToHijri" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">773</span>
 
@@ -2386,6 +2538,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">WesternToHijri</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$day</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
         <section class="phpdocumentor-description"><p>The Western date is Julian date before 1582 and Gregorian after</p>
 </section>
 
@@ -2422,13 +2576,15 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>An array contains Hijri Date: 'y' key for year,'m' key for month,'d' key for day</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>An array contains Hijri Date: 'y' key for year,'m' key for month,'d' key for day</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -2439,9 +2595,10 @@ if the given month is out of umalqura range the function will return empty array
     <h4 class="phpdocumentor-element__name" id="method_get_umalquradata">
         get_umalquradata()
         <a href="classes/hijri-Calendar.html#method_get_umalquradata" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html"><abbr title="hijri.class.php">hijri.class.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="hijri.class.php"><a href="files/hijri-class.html">hijri.class.php</a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">534</span>
 
@@ -2453,6 +2610,8 @@ if the given month is out of umalqura range the function will return empty array
     <span class="phpdocumentor-signature__visibility">protected</span>
                     <span class="phpdocumentor-signature__name">get_umalquradata</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$with_adj</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">TRUE</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$return_array</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">FALSE</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2478,80 +2637,185 @@ if the given month is out of umalqura range the function will return empty array
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>array contains Um Al-Qura data if $return_array =true, bool true else</p>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>array contains Um Al-Qura data if $return_array =true, bool true else</p>
 </section>
 
-    
+            </section>
+
 </article>
             </section>
 
-        
+        <div class="phpdocumentor-modal" id="source-view">
+    <div class="phpdocumentor-modal-bg" data-exit-button></div>
+    <div class="phpdocumentor-modal-container">
+        <div class="phpdocumentor-modal-content">
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/hijri.class.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+        </div>
+        <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
+    </div>
+</div>
+
     <script type="text/javascript">
-        function loadExternalCodeSnippets(line) {
-            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
-                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
-                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-                var language = 'php';
+        (function () {
+            function loadExternalCodeSnippet(el, url, line) {
+                Array.prototype.slice.call(el.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                    const src = url || pre.getAttribute('data-src').replace(/\\/g, '/');
+                    const language = 'php';
 
-                var code = document.createElement('code');
-                code.className = 'language-' + language;
+                    const code = document.createElement('code');
+                    code.className = 'language-' + language;
+                    pre.textContent = '';
+                    pre.setAttribute('data-line', line)
+                    code.textContent = 'Loading…';
+                    pre.appendChild(code);
 
-                pre.textContent = '';
+                    var xhr = new XMLHttpRequest();
 
-                pre.setAttribute('data-line', line)
-                code.textContent = 'Loading…';
+                    xhr.open('GET', src, true);
 
-                pre.appendChild(code);
-
-                var xhr = new XMLHttpRequest();
-
-                xhr.open('GET', src, true);
-
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4) {
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState !== 4) {
+                            return;
+                        }
 
                         if (xhr.status < 400 && xhr.responseText) {
                             code.textContent = xhr.responseText;
-
                             Prism.highlightElement(code);
+                            return;
                         }
-                        else if (xhr.status >= 400) {
+
+                        if (xhr.status === 404) {
+                            code.textContent = '✖ Error: File could not be found';
+                            return;
+                        }
+
+                        if (xhr.status >= 400) {
                             code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                            return;
                         }
-                        else {
-                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
-                        }
+
+                        code.textContent = '✖ Error: An unknown error occurred';
+                    };
+
+                    xhr.send(null);
+                });
+            }
+
+            const modalButtons = document.querySelectorAll("[data-modal]");
+            const openedAsLocalFile = window.location.protocol === 'file:';
+            if (modalButtons.length > 0 && openedAsLocalFile) {
+                console.warn(
+                    'Viewing the source code is unavailable because you are opening this page from the file:// scheme; ' +
+                    'browsers block XHR requests when a page is opened this way'
+                );
+            }
+
+            modalButtons.forEach(function (trigger) {
+                if (openedAsLocalFile) {
+                    trigger.setAttribute("hidden", "hidden");
+                }
+
+                trigger.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const modal = document.getElementById(trigger.dataset.modal);
+                    if (!modal) {
+                        console.error(`Modal with id "${trigger.dataset.modal}" could not be found`);
+                        return;
                     }
-                };
+                    modal.classList.add("phpdocumentor-modal__open");
 
-                xhr.send(null);
-            });
-        }
-
-        var modals = document.querySelectorAll("[data-modal]");
-
-        modals.forEach(function (trigger) {
-            trigger.addEventListener("click", function (event) {
-                //event.preventDefault();
-                const modal = document.getElementById(trigger.dataset.modal);
-                modal.classList.add("phpdocumentor-modal__open");
-                loadExternalCodeSnippets(trigger.dataset.line)
-                const exits = modal.querySelectorAll("[data-exit-button]");
-                exits.forEach(function (exit) {
-                    exit.addEventListener("click", function (event) {
-                        event.preventDefault();
-                        modal.classList.remove("phpdocumentor-modal__open");
+                    loadExternalCodeSnippet(modal, trigger.dataset.src || null, trigger.dataset.line)
+                    const exits = modal.querySelectorAll("[data-exit-button]");
+                    exits.forEach(function (exit) {
+                        exit.addEventListener("click", function (event) {
+                            event.preventDefault();
+                            modal.classList.remove("phpdocumentor-modal__open");
+                        });
                     });
                 });
             });
-        });
+        })();
     </script>
 
     </article>
-                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+                                </section>
+                <section class="phpdocumentor-on-this-page__sidebar">
+                                
+    <section class="phpdocumentor-on-this-page__content">
+        <strong class="phpdocumentor-on-this-page__title">On this page</strong>
+
+        <ul class="phpdocumentor-list -clean">
+            <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                        <li><a href="classes/hijri-CalendarAdjustment.html#toc-constants">Constants</a></li>
+                                                            <li><a href="classes/hijri-CalendarAdjustment.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/hijri-CalendarAdjustment.html#toc-methods">Methods</a></li>
+                                    </ul>
+            </li>
+                            <li class="phpdocumentor-on-this-page-section__title">Constants</li>
+                <li>
+                    <ul class="phpdocumentor-list -clean">
+                                                    <li><a href="classes/hijri-Calendar.html#constant_mjd_factor">mjd_factor</a></li>
+                                                    <li><a href="classes/hijri-Calendar.html#constant_umendjd">umendjd</a></li>
+                                                    <li><a href="classes/hijri-Calendar.html#constant_umendyear">umendyear</a></li>
+                                                    <li><a href="classes/hijri-Calendar.html#constant_umstartjd">umstartjd</a></li>
+                                                    <li><a href="classes/hijri-Calendar.html#constant_umstartyear">umstartyear</a></li>
+                                            </ul>
+                </li>
+            
+                            <li class="phpdocumentor-on-this-page-section__title">Properties</li>
+                <li>
+                    <ul class="phpdocumentor-list -clean">
+                                                    <li><a href="classes/hijri-Calendar.html#property_supported_languages">$supported_languages<a href="classes/hijri-CalendarAdjustment.html"></li>
+                                                    <li><a href="classes/hijri-Calendar.html#property_umalqura">$umalqura<a href="classes/hijri-CalendarAdjustment.html"></li>
+                                                    <li><a href="classes/hijri-Calendar.html#property_adj_data">$adj_data<a href="classes/hijri-CalendarAdjustment.html"></li>
+                                                    <li><a href="classes/hijri-Calendar.html#property_umdata">$umdata<a href="classes/hijri-CalendarAdjustment.html"></li>
+                                                    <li><a href="classes/hijri-CalendarAdjustment.html#property_umdata_clear">$umdata_clear<a href="classes/hijri-CalendarAdjustment.html"></li>
+                                                    <li><a href="classes/hijri-CalendarAdjustment.html#property_grdate_format">$grdate_format<a href="classes/hijri-CalendarAdjustment.html"></li>
+                                            </ul>
+                </li>
+            
+                        <li class="phpdocumentor-on-this-page-section__title">Methods</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                            <li><a href="classes/hijri-CalendarAdjustment.html#method___construct">__construct()</a></li>
+                                            <li><a href="classes/hijri-CalendarAdjustment.html#method_add_adj">add_adj()</a></li>
+                                            <li><a href="classes/hijri-CalendarAdjustment.html#method_auto_del_info">auto_del_info()</a></li>
+                                            <li><a href="classes/hijri-CalendarAdjustment.html#method_check_auto_adj">check_auto_adj()</a></li>
+                                            <li><a href="classes/hijri-CalendarAdjustment.html#method_check_auto_del">check_auto_del()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_checkHijriDate">checkHijriDate()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_days_in_month">days_in_month()</a></li>
+                                            <li><a href="classes/hijri-CalendarAdjustment.html#method_del_adj">del_adj()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_english_suffix">english_suffix()</a></li>
+                                            <li><a href="classes/hijri-CalendarAdjustment.html#method_get_adjdata">get_adjdata()</a></li>
+                                            <li><a href="classes/hijri-CalendarAdjustment.html#method_get_current_adjs">get_current_adjs()</a></li>
+                                            <li><a href="classes/hijri-CalendarAdjustment.html#method_get_possible_starts">get_possible_starts()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_GregorianToHijri">GregorianToHijri()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_HijriToGregorian">HijriToGregorian()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_HijriToJD">HijriToJD()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_HijriToJulian">HijriToJulian()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_HijriToWestern">HijriToWestern()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_jd2hijri">jd2hijri()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_JDToHijri">JDToHijri()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_JulianToHijri">JulianToHijri()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_leap_year">leap_year()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_month_name">month_name()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_monthnames">monthnames()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_WesternToHijri">WesternToHijri()</a></li>
+                                            <li><a href="classes/hijri-Calendar.html#method_get_umalquradata">get_umalquradata()</a></li>
+                                    </ul>
+            </li>
+                    </ul>
+    </section>
+
+                </section>
+                            </div>
+            <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
     <section class="phpdocumentor-search-results__dialog">
         <header class="phpdocumentor-search-results__header">
             <h2 class="phpdocumentor-search-results__title">Search results</h2>
@@ -2562,7 +2826,6 @@ if the given month is out of umalqura range the function will return empty array
         </section>
     </section>
 </section>
-            </div>
         </div>
         <a href="classes/hijri-CalendarAdjustment.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
